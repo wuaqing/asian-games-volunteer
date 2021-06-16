@@ -1,0 +1,40 @@
+#环境的配置文件
+spring:
+  application:
+    name: asian-games-volunteer   #当前项目的名字
+  datasource:   #数据库连接的配置
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/volunteer?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai   #数据库名称为blog，地区为上海，不加会报错
+    username: root  #数据库名称
+    password: 111111  #数据库密码
+  redis:
+    host: 1.15.153.38
+    port: 9736
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 500
+        min-idle: 0
+    lettuce:
+      shutdown-timeout: 0
+    password: HCYhcy@0901
+  session:
+    store-type: redis
+
+logging:    #日志配置
+  level:
+    root: warn
+    com.inet: info
+  file:
+    path: log/volunteer-pro.log
+
+
+server:
+  port: 8081  #端口号
+  servlet:
+    context-path: /volunteer   #路径
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/*.xml
+
