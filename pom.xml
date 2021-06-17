@@ -71,6 +71,13 @@
             <version>3.0.0</version>
         </dependency>
 
+        <!-- xiaoTools工具类 -->
+        <dependency>
+            <groupId>io.github.xiaoxunyao</groupId>
+            <artifactId>xiaoTools</artifactId>
+            <version>0.1.1-releases</version>
+        </dependency>
+
     </dependencies>
 
     <build>
