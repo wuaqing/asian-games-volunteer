@@ -12,7 +12,7 @@ import lombok.experimental.Accessors;
 
 /**
  * <p>
- * 
+ * 新闻实体类
  * </p>
  *
  * @author wsq

@@ -1,6 +1,7 @@
 package com.wsq.code.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
@@ -10,7 +11,7 @@ import lombok.experimental.Accessors;
 
 /**
  * <p>
- * 
+ * 考试成绩实体类
  * </p>
  *
  * @author wsq
@@ -33,11 +34,13 @@ public class Grade implements Serializable {
     /**
      * 用户id（连接用户表）
      */
+    @TableField(value = "user_id")
     private String userId;
 
     /**
      * 试卷标题（连接考试内容表）
      */
+    @TableField(value = "exam_title")
     private String examTitle;
 
     /**

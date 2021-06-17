@@ -1,6 +1,7 @@
 package com.wsq.code.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
@@ -10,7 +11,7 @@ import lombok.experimental.Accessors;
 
 /**
  * <p>
- * 
+ * 考试内容实体类
  * </p>
  *
  * @author wsq
@@ -48,21 +49,25 @@ public class ExamContent implements Serializable {
     /**
      * 选项A
      */
+    @TableField(value = "option_a")
     private String optionA;
 
     /**
      * 选项B
      */
+    @TableField(value = "option_b")
     private String optionB;
 
     /**
      * 选项C
      */
+    @TableField(value = "option_c")
     private String optionC;
 
     /**
      * 选项D
      */
+    @TableField(value = "option_d")
     private String optionD;
 
     /**
