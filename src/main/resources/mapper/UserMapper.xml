@@ -2,4 +2,25 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.wsq.code.mapper.UserMapper">
 
+    <!-- 根据学号和密码查询是否存在该用户 -->
+    <select id="selectByStudentIdAndPassword" resultType="com.wsq.code.entity.User">
+        SELECT
+         iuser.id AS id,
+         iuser.student_id AS studentId,
+         iuser.`password` AS `password`,
+         iuser.`name` AS `name`,
+         iuser.sex AS sex,
+         iuser.telephone AS telephone,
+         iuser.`language` AS `language`,
+         iuser.job AS job,
+         iuser.age AS age,
+         iuser.role AS role
+        FROM
+            table_user AS iuser
+        WHERE
+            iuser.student_id = #{studentId}
+        AND
+            iuser.`password` = #{MD5Password}
+        LIMIT 1;
+    </select>
 </mapper>

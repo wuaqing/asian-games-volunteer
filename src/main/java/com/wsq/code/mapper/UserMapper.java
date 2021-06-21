@@ -13,4 +13,14 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  */
 public interface UserMapper extends BaseMapper<User> {
 
+    /**
+     *
+     * @description: 根据学号和密码查询是否存在该用户
+     * @author wsq
+     * @since 2021/6/18 16:08
+     * @param studentId: 学号/工号
+     * @param MD5Password: 密码
+     * @return com.wsq.code.entity.User
+    */
+    User selectByStudentIdAndPassword(String studentId, String MD5Password);
 }

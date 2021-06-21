@@ -43,6 +43,11 @@ public class User implements Serializable {
     private String studentId;
 
     /**
+     * 密码
+     */
+    private String password;
+
+    /**
      * 姓名
      */
     private String name;
