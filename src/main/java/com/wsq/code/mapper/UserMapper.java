@@ -23,4 +23,14 @@ public interface UserMapper extends BaseMapper<User> {
      * @return com.wsq.code.entity.User
     */
     User selectByStudentIdAndPassword(String studentId, String MD5Password);
+
+    /**
+     *
+     * @description: 根据学号查询该用户是否存在，存在则返回用户信息，不存在则为null
+     * @author wsq
+     * @since 2021/6/21 11:14
+     * @param studentId: 学号
+     * @return com.wsq.code.entity.User
+    */
+    User selectByStudentId(String studentId);
 }

@@ -36,9 +36,38 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
      * @return com.wsq.code.entity.User
     */
     @Override
-    public User Login(String studentId, String password) {
+    public User login(String studentId, String password) {
         //通过 student_id 和加密后的 password 来查询是否存在该用户。如果用户存在，返回用户信息，如果用户不存在，返回null
         User user = userMapper.selectByStudentIdAndPassword(studentId, MD5Utils.code(password));
+        return user;
+    }
+
+    /**
+     *
+     * @description: 用于用户注册
+     * @author wsq
+     * @since 2021/6/21 11:16
+     * @param user: 用户信息
+     * @return com.wsq.code.entity.User
+    */
+    @Override
+    public User register(User user) {
+        //用户注册
+        userMapper.insert(user);
+        return user;
+    }
+
+    /**
+     *
+     * @description: 根据学号查询该用户是否存在，存在则返回用户信息，不存在则为null
+     * @author wsq
+     * @since 2021/6/21 11:08
+     * @param studentId: 学号
+     * @return com.wsq.code.entity.User
+    */
+    @Override
+    public User selectUser(String studentId) {
+        User user = userMapper.selectByStudentId(studentId);
         return user;
     }
 }

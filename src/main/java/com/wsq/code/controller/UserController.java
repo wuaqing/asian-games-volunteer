@@ -3,9 +3,7 @@ package com.wsq.code.controller;
 
 import com.wsq.code.entity.User;
 import com.wsq.code.service.UserService;
-import com.wsq.code.service.impl.UserServiceImpl;
 import com.xiaoTools.core.result.Result;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -31,10 +29,36 @@ public class UserController {
     @Resource
     private UserService userService;
 
-    @GetMapping("/demo")
-    public Result getDemo(){
-        return new Result().result200(new User(),"/user/demo");
+    /**
+     *
+     * @description: 用于用户注册
+     * @author wsq
+     * @since 2021/6/21 11:27
+     * @param studentId: 学号
+     * @param password: 密码
+     * @param name: 姓名
+     * @param sex: 性别
+     * @param telephone: 电话号码
+     * @param language: 会什么语言
+     * @param job: 申请岗位
+     * @param age: 年龄
+     * @return com.xiaoTools.core.result.Result
+    */
+    @PostMapping("/register")
+    public Result register(
+            String studentId,String password,String name,String sex,String telephone,String language,String job,Integer age){
+        User user = new User(null, studentId, password, name, sex, telephone, language, job, age, "user");
+        //查询该用户是否存在
+        User isUser = userService.selectUser(user.getStudentId());
+        //用户不存在，可以注册
+        if (isUser == null){
+            //用户注册
+            User register = userService.register(user);
+            return new Result().result200(register,"/user/register");
+        }
+        return new Result().result403("该用户已经存在","/user/register");
     }
+
 
     /**
      *
@@ -48,7 +72,7 @@ public class UserController {
     @PostMapping("adminLogin")
     public Result adminLogin(String studentId,String password) {
         //调用 Service 查询登录信息是否正确，正确返回用户信息，错误返回null
-        User user = userService.Login(studentId, password);
+        User user = userService.login(studentId, password);
         //用户信息错误
         if (user == null) {
             return new Result().result403("登录信息填写错误，请重新输入","/user/adminLogin");
@@ -73,7 +97,7 @@ public class UserController {
     @PostMapping("userLogin")
     public Result userLogin(String studentId,String password) {
         //调用 Service 查询登录信息是否正确，正确返回用户信息，错误返回null
-        User user = userService.Login(studentId, password);
+        User user = userService.login(studentId, password);
         //用户信息错误
         if (user == null) {
             return new Result().result403("登录信息填写错误，请重新输入","/user/userLogin");

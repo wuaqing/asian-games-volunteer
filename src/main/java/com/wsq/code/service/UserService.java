@@ -22,6 +22,26 @@ public interface UserService extends IService<User> {
      * @param password: 密码
      * @return com.wsq.code.entity.User
     */
-    User Login(String studentId, String password);
+    User login(String studentId, String password);
+
+    /**
+     *
+     * @description: 用于用户注册
+     * @author wsq
+     * @since 2021/6/21 10:45
+     * @param user: 用户信息
+     * @return com.wsq.code.entity.User
+    */
+    User register(User user);
+
+    /**
+     *
+     * @description: 根据学号查询该用户是否存在，存在则返回用户信息，不存在则为null
+     * @author wsq
+     * @since 2021/6/21 11:07
+     * @param studentId: 学号
+     * @return com.wsq.code.entity.User
+    */
+    User selectUser(String studentId);
 
 }

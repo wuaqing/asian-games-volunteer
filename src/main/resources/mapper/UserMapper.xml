@@ -23,4 +23,23 @@
             iuser.`password` = #{MD5Password}
         LIMIT 1;
     </select>
+    <!-- 根据学号查询该用户是否存在 -->
+    <select id="selectByStudentId" resultType="com.wsq.code.entity.User">
+        SELECT
+         iuser.id AS id,
+         iuser.student_id AS studentId,
+         iuser.`password` AS `password`,
+         iuser.`name` AS `name`,
+         iuser.sex AS sex,
+         iuser.telephone AS telephone,
+         iuser.`language` AS `language`,
+         iuser.job AS job,
+         iuser.age AS age,
+         iuser.role AS role
+        FROM
+            table_user AS iuser
+        WHERE
+            iuser.student_id = #{studentId}
+        LIMIT 1;
+    </select>
 </mapper>
