@@ -1,20 +1,20 @@
-package com.wsq.code.entity;
+package com.wsq.code.entity.user;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import java.io.Serializable;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
+import java.io.Serializable;
+
 /**
  * <p>
- * 用户实体类
+ * 用户注册实体类
  * </p>
  *
  * @author wsq
@@ -25,21 +25,13 @@ import lombok.experimental.Accessors;
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@TableName("table_user")
-public class User implements Serializable {
+public class UserRegister implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 主键id
-     */
-    @TableId(value = "id",type = IdType.ASSIGN_UUID)
-    private String id;
-
-    /**
      * 学号（唯一不重复）
      */
-    @TableField(value = "student_id")
     private String studentId;
 
     /**
@@ -76,11 +68,5 @@ public class User implements Serializable {
      * 年龄
      */
     private Integer age;
-
-    /**
-     * 角色（是否为管理员）
-     */
-    private String role;
-
 
 }

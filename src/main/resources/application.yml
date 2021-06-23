@@ -9,7 +9,7 @@ spring:
     username: root  #数据库名称
     password: 111111  #数据库密码
   redis:
-    host: 1.15.153.38
+    host: 42.192.41.187
     port: 9736
     jedis:
       pool:
@@ -17,11 +17,14 @@ spring:
         max-wait: -1
         max-idle: 500
         min-idle: 0
-    lettuce:
-      shutdown-timeout: 0
     password: HCYhcy@0901
   session:
     store-type: redis
+  servlet:
+    multipart:
+      max-file-size: 200MB
+      max-request-size: 200MB
+      enabled: true
 
 logging:    #日志配置
   level:

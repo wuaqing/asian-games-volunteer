@@ -2,6 +2,10 @@ package com.wsq.code.service;
 
 import com.wsq.code.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.wsq.code.entity.user.UserLogin;
+import com.wsq.code.entity.user.UserRegister;
+import com.wsq.code.entity.user.UserUpdate;
+import com.xiaoTools.core.result.Result;
 
 /**
  * <p>
@@ -18,21 +22,20 @@ public interface UserService extends IService<User> {
      * @description: 用于登录，核对数据库中是否有该学号（工号）和密码
      * @author wsq
      * @since 2021/6/18 14:55
-     * @param studentId: 学号/工号
-     * @param password: 密码
+     * @param userLogin: 用户登录实体类
      * @return com.wsq.code.entity.User
     */
-    User login(String studentId, String password);
+    User login(UserLogin userLogin);
 
     /**
      *
      * @description: 用于用户注册
      * @author wsq
      * @since 2021/6/21 10:45
-     * @param user: 用户信息
+     * @param userRegister: 用户注册实体类
      * @return com.wsq.code.entity.User
     */
-    User register(User user);
+    User register(UserRegister userRegister);
 
     /**
      *
@@ -44,4 +47,14 @@ public interface UserService extends IService<User> {
     */
     User selectUser(String studentId);
 
+    /**
+     *
+     * @description: 用户信息修改
+     * @author wsq
+     * @since 2021/6/22 9:28
+     * @param token: 识别令牌
+     * @param userUpdate: 用户修改实体类
+     * @return com.wsq.code.entity.User
+    */
+    Result update(String token, UserUpdate userUpdate,String path);
 }
