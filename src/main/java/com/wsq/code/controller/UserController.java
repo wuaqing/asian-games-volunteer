@@ -95,8 +95,11 @@ public class UserController {
         if (user == null) {
             return new Result().result403("登录信息填写错误，请重新输入","/user/userLogin");
         }
+        //定义一个无重复的键
         String key = IdUtil.fastUUID();
+        //将键和 user 放入 redis 中，设置时间为7天
         redisTemplate.opsForValue().set(key,user,7, TimeUnit.DAYS);
+        // result 中包含两个信息：登陆成功；和 user 对应的 key
         Map<String,String> result = new HashMap<>(2);
         result.put("info","登录成功");
         result.put("token",key);

@@ -1,10 +1,13 @@
 package com.wsq.code.service.impl;
 
+import com.wsq.code.entity.Job;
 import com.wsq.code.entity.User;
 import com.wsq.code.entity.user.UserLogin;
 import com.wsq.code.entity.user.UserRegister;
 import com.wsq.code.entity.user.UserUpdate;
+import com.wsq.code.mapper.JobMapper;
 import com.wsq.code.mapper.UserMapper;
+import com.wsq.code.service.JobService;
 import com.wsq.code.service.UserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.wsq.code.util.BeanUtil;
@@ -33,6 +36,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
      */
     @Resource
     private UserMapper userMapper;
+
+    @Resource
+    private JobService jobService;
 
     @Resource
     private RedisTemplate<String,Object> redisTemplate;
@@ -102,9 +108,22 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         if (user == null) {
             return new Result().result200("用户未登录",path);
         }
+        //判断性别
+        if (userUpdate.getSex() != "女" && userUpdate.getSex() != "男"){
+            return new Result().result403("修改失败，性别请填写\"女\"或者\"男\"",path);
+        }
         //判断电话号码
         if (Validation.isMobile(userUpdate.getTelephone())) {
             return new Result().result403("修改失败，电话号码不正确",path);
+        }
+        //判断工作岗位
+        Job byId = jobService.getById(userUpdate.getJob());
+        if (byId == null){
+            return new Result().result403("修改失败，请填写正确的工作岗位",path);
+        }
+        //判断年龄
+        if (userUpdate.getAge() < 18 || userUpdate.getAge() > 100){
+            return new Result().result403("修改失败，请填写正确的年龄",path);
         }
         // 将 userUpdate 中的信息放入 User 实体类中，在数据库中修改此 id 的 user 的信息
         boolean update = this.updateById(BeanUtil.copy(userUpdate, User.class).setId(user.getId()));
