@@ -28,8 +28,8 @@ spring:
 
 logging:    #日志配置
   level:
-    root: warn
-    com.inet: info
+    root: info
+    com.wsq: debug
   file:
     path: log/volunteer-pro.log
 

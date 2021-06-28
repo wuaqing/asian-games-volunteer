@@ -2,6 +2,7 @@ package com.wsq.code.controller;
 
 
 import com.wsq.code.entity.User;
+import com.wsq.code.entity.user.UpdatePassword;
 import com.wsq.code.entity.user.UserLogin;
 import com.wsq.code.entity.user.UserRegister;
 import com.wsq.code.entity.user.UserUpdate;
@@ -38,6 +39,20 @@ public class UserController {
 
     @Resource
     private RedisTemplate<String , Object> redisTemplate;
+
+    /**
+     *
+     * @description: 修改密码
+     * @author wsq
+     * @since 2021/6/28 9:42
+     * @param token:
+     * @param updatePassword: 用户修改密码实体类,包含旧密码和新密码
+     * @return com.xiaoTools.core.result.Result
+    */
+    @PutMapping("/password")
+    public Result password(@RequestHeader(value = "Token") String token,@RequestBody UpdatePassword updatePassword){
+        return userService.password(token,updatePassword,"/user/password");
+    }
 
     /**
      *

@@ -2,6 +2,7 @@ package com.wsq.code.service;
 
 import com.wsq.code.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.wsq.code.entity.user.UpdatePassword;
 import com.wsq.code.entity.user.UserLogin;
 import com.wsq.code.entity.user.UserRegister;
 import com.wsq.code.entity.user.UserUpdate;
@@ -59,4 +60,16 @@ public interface UserService extends IService<User> {
      * @return com.xiaoTools.core.result.Result
     */
     Result update(String token, UserUpdate userUpdate,String path);
+
+    /**
+     *
+     * @description: 密码修改
+     * @author wsq
+     * @since 2021/6/28 9:43
+     * @param token:
+     * @param updatePassword: 用户修改密码实体类,包含旧密码和新密码
+     * @param path: 地址
+     * @return com.xiaoTools.core.result.Result
+    */
+    Result password(String token, UpdatePassword updatePassword, String path);
 }

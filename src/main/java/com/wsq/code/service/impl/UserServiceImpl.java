@@ -2,6 +2,7 @@ package com.wsq.code.service.impl;
 
 import com.wsq.code.entity.Job;
 import com.wsq.code.entity.User;
+import com.wsq.code.entity.user.UpdatePassword;
 import com.wsq.code.entity.user.UserLogin;
 import com.wsq.code.entity.user.UserRegister;
 import com.wsq.code.entity.user.UserUpdate;
@@ -19,6 +20,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.concurrent.TimeUnit;
 
 /**
  * <p>
@@ -181,5 +183,38 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         }
         //修改失败
         return new Result().result403("修改失败",path);
+    }
+
+    /**
+     *
+     * @description: 密码修改
+     * @author wsq
+     * @since 2021/6/28 9:44
+     * @param token:
+     * @param updatePassword: 用户修改密码实体类,包含旧密码和新密码
+     * @param path:
+     * @return com.xiaoTools.core.result.Result
+    */
+    @Override
+    public Result password(String token, UpdatePassword updatePassword, String path) {
+        //获取该 token 对应的 user
+        User user = (User) redisTemplate.opsForValue().get(token);
+        //判断该用户对应的密码与用户输入的密码是否一致
+        if(user.getPassword().equals(MD5Utils.code(updatePassword.getOldPassword()))){
+            //密码正确,修改密码
+            user.setPassword(MD5Utils.code(updatePassword.getNewPassword()));
+            boolean update = this.updateById(user);
+            //修改成功
+            if (update){
+                //更新 redis
+                redisTemplate.opsForValue().set(token,user,7, TimeUnit.DAYS);
+                //返回修改成功
+                return new Result().result200("修改成功",path);
+            }
+            //修改失败
+            return new Result().result403("修改失败",path);
+        }
+        //该用户对应的密码与用户输入的密码不一致
+        return new Result().result403("密码输入错误",path);
     }
 }
