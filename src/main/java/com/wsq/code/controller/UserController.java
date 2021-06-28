@@ -63,20 +63,7 @@ public class UserController {
     */
     @PostMapping("/register")
     public Result register(UserRegister userRegister){
-        //查询该用户是否存在
-        User isUser = userService.selectUser(userRegister.getStudentId());
-        //用户不存在，可以注册
-        if (isUser == null){
-            //用户注册
-            userService.register(userRegister);
-            //注册完成再次检测用户是否存在
-            isUser = userService.selectUser(userRegister.getStudentId());
-            if (isUser != null){
-                return new Result().result200("注册成功","/user/register");
-            }
-            return new Result().result403("出错了","/user/register");
-        }
-        return new Result().result403("该用户已经存在","/user/register");
+        return userService.register(userRegister,"/user/register");
     }
 
     /**

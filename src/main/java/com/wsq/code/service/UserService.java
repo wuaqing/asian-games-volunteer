@@ -33,9 +33,10 @@ public interface UserService extends IService<User> {
      * @author wsq
      * @since 2021/6/21 10:45
      * @param userRegister: 用户注册实体类
-     * @return com.wsq.code.entity.User
+     * @param path: 地址
+     * @return com.xiaoTools.core.result.Result
     */
-    User register(UserRegister userRegister);
+    Result register(UserRegister userRegister,String path);
 
     /**
      *
@@ -54,7 +55,8 @@ public interface UserService extends IService<User> {
      * @since 2021/6/22 9:28
      * @param token: 识别令牌
      * @param userUpdate: 用户修改实体类
-     * @return com.wsq.code.entity.User
+     * @param path: 地址
+     * @return com.xiaoTools.core.result.Result
     */
     Result update(String token, UserUpdate userUpdate,String path);
 }
