@@ -20,6 +20,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -217,4 +218,21 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         //该用户对应的密码与用户输入的密码不一致
         return new Result().result403("密码输入错误",path);
     }
+
+    /**
+     *
+     * @description: 管理员查看所有用户
+     * @author wsq
+     * @since 2021/6/28 11:36
+     * @param path:
+     * @return com.xiaoTools.core.result.Result
+    */
+    @Override
+    public Result selectAllUser(String path) {
+        //查询所有用户信息
+        List<User> list = this.list();
+        //查询成功
+        return new Result().result200(list,path);
+    }
+
 }

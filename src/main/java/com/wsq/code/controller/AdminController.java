@@ -7,6 +7,7 @@ import com.wsq.code.service.UserService;
 import com.xiaoTools.core.IdUtil.IdUtil;
 import com.xiaoTools.core.result.Result;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -29,13 +30,26 @@ import java.util.concurrent.TimeUnit;
 public class AdminController {
 
     /**
-     * Service 接口
+     * UserService 接口
      */
     @Resource
     private UserService userService;
 
     @Resource
     private RedisTemplate<String,Object> redisTemplate;
+
+    /**
+     *
+     * @description: 管理员查看所有用户
+     * @author wsq
+     * @since 2021/6/28 11:33
+
+     * @return com.xiaoTools.core.result.Result
+    */
+    @GetMapping("/selectAllUser")
+    public Result selectAllUser(){
+        return userService.selectAllUser("/user/selectAllUser");
+    }
 
     /**
      *

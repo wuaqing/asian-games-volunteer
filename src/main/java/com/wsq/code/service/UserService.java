@@ -72,4 +72,14 @@ public interface UserService extends IService<User> {
      * @return com.xiaoTools.core.result.Result
     */
     Result password(String token, UpdatePassword updatePassword, String path);
+
+    /**
+     *
+     * @description: 管理员查看所有用户
+     * @author wsq
+     * @since 2021/6/28 11:32
+     * @param path:
+     * @return com.xiaoTools.core.result.Result
+    */
+    Result selectAllUser(String path);
 }
