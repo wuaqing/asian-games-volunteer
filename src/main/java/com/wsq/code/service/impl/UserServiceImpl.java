@@ -1,26 +1,34 @@
 package com.wsq.code.service.impl;
 
+import cn.afterturn.easypoi.excel.ExcelImportUtil;
+import cn.afterturn.easypoi.excel.entity.ImportParams;
 import com.wsq.code.entity.Job;
 import com.wsq.code.entity.User;
-import com.wsq.code.entity.user.UpdatePassword;
-import com.wsq.code.entity.user.UserLogin;
-import com.wsq.code.entity.user.UserRegister;
-import com.wsq.code.entity.user.UserUpdate;
+import com.wsq.code.entity.user.*;
 import com.wsq.code.mapper.JobMapper;
 import com.wsq.code.mapper.UserMapper;
 import com.wsq.code.service.JobService;
 import com.wsq.code.service.UserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.wsq.code.util.BeanUtil;
+import com.wsq.code.util.FileUtil;
 import com.wsq.code.util.MD5Utils;
 import com.xiaoTools.core.regular.validation.Validation;
 import com.xiaoTools.core.result.Result;
 import org.springframework.context.annotation.Bean;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletResponse;
+import java.io.*;
+import java.net.URLEncoder;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -134,8 +142,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     */
     @Override
     public User selectUser(String studentId) {
-        User user = userMapper.selectByStudentId(studentId);
-        return user;
+        return userMapper.selectByStudentId(studentId);
     }
 
     /**
@@ -233,6 +240,110 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         List<User> list = this.list();
         //查询成功
         return new Result().result200(list,path);
+    }
+
+    /**
+     *
+     * @description: 管理员批量添加用户
+     * @author wsq
+     * @since 2021/6/30 16:53
+     * @param file: excel 表格（包含学号、姓名、电话号码）
+     * @param path:
+     * @return com.xiaoTools.core.result.Result
+    */
+    @Override
+    public Result adminAddUser(MultipartFile file, String path) {
+        File transfer = null;
+        try {
+            transfer = FileUtil.transferToFile(file);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        //导入的标题和说明的设置
+        ImportParams params = new ImportParams();
+        // excel 导入校验
+        //导入获取集合
+        List<ExcelUser> users = ExcelImportUtil.importExcel(transfer, ExcelUser.class, params);
+        //将 ExcelUser to [User](entity)
+        List<User> userList = BeanUtil.batchCopy(users, User.class);
+        //存储正确的用户信息
+        List<User> add = new ArrayList<>();
+        List<User> remove = new ArrayList<>();
+        int removeNum = 0;
+        int addNum = 0;
+        //遍历集合，将部分参数不正确的移除，并存储与remove集合中
+        for (User user : userList) {
+            if (userMapper.selectByStudentIdCount(user.getStudentId()) != 0) {
+                remove.add(user);
+                removeNum++;
+                continue;
+            }
+            if (!Validation.isMobile(user.getTelephone())) {
+                remove.add(user);
+                removeNum++;
+                continue;
+            }
+            add.add( user.setRole("user").setPassword(MD5Utils.code("123456")) );
+            addNum++;
+        }
+        remove.forEach(System.out::println);
+        System.out.println(removeNum);
+        if (this.saveBatch(add)) {
+            if (removeNum == 0){
+                return new Result().result200("全部添加成功,密码为123456", path);
+            }
+            Map<String, Object> returnMassage = new HashMap<>(2);
+            returnMassage.put("info","添加失败" + removeNum + "位,成功" + addNum + "位,密码为123456");
+            returnMassage.put("user",remove);
+            return new Result().result200(returnMassage, path);
+        }
+        return new Result().result403("添加失败", path);
+
+    }
+
+    /**
+     *
+     * @description: 批量添加前下载 excel 模板
+     * @author wsq
+     * @since 2021/7/1 16:09
+     * @param response:
+     * @return void
+    */
+    @Override
+    public void adminAddUserModule(HttpServletResponse response) {
+        try {
+            //加载 resources 下，路径为 "static/test.xlsx" 的资源
+            ClassPathResource resource = new ClassPathResource("static/test.xlsx");
+            //获取文件
+            File file = resource.getFile();
+            //获取原文件名称
+            String filename = resource.getFilename();
+            //新建字节输入流
+            InputStream inputStream = new FileInputStream(file);
+            //强制下载不打开
+            response.setContentType("application/force-download");
+            //新建字节输出流
+            OutputStream out = response.getOutputStream();
+            //使用URLEncoder来防止文件名乱码或者读取错误
+            response.setHeader("Content-Disposition", "attachment; filename=" + URLEncoder.encode(filename, "UTF-8"));
+            int b = 0;
+            byte[] buffer = new byte[1000000];
+            //读写
+            while (b != -1) {
+                //读取文件信息
+                b = inputStream.read(buffer);
+                if (b != -1) {
+                    //写入文件信息
+                    out.write(buffer, 0, b);        //当 b=-1 时，读写结束
+                }
+            }
+            //清楚缓冲区并关闭流对象
+            inputStream.close();
+            out.close();
+            out.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }

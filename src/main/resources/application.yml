@@ -25,6 +25,15 @@ spring:
       max-file-size: 200MB
       max-request-size: 200MB
       enabled: true
+  sa-token:
+    token-name: satoken
+    timeout: 2592000
+    activity-timeout: -1
+    is-concurrent: false
+    is-share: false
+    token-style: tik
+    is-log: false
+    is-print: false
 
 logging:    #日志配置
   level:
@@ -40,4 +49,6 @@ server:
     context-path: /volunteer   #路径
 mybatis-plus:
   mapper-locations: classpath*:/mapper/*.xml
+  global-config:
+    banner: false
 

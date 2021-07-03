@@ -33,4 +33,14 @@ public interface UserMapper extends BaseMapper<User> {
      * @return com.wsq.code.entity.User
     */
     User selectByStudentId(String studentId);
+
+    /**
+     *
+     * @description: 通过学号获取个数
+     * @author wsq
+     * @since 2021/6/30 20:15
+     * @param studentId: 学号
+     * @return int
+    */
+    int selectByStudentIdCount(String studentId);
 }

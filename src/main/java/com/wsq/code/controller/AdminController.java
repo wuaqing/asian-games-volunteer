@@ -1,21 +1,23 @@
 package com.wsq.code.controller;
 
 
+import cn.dev33.satoken.annotation.SaCheckRole;
+import cn.dev33.satoken.stp.StpUtil;
 import com.wsq.code.entity.User;
 import com.wsq.code.entity.user.UserLogin;
 import com.wsq.code.service.UserService;
-import com.xiaoTools.core.IdUtil.IdUtil;
 import com.xiaoTools.core.result.Result;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletResponse;
+import java.io.*;
+import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.TimeUnit;
 
 /**
  * <p>
@@ -40,14 +42,43 @@ public class AdminController {
 
     /**
      *
+     * @description: 管理员批量添加用户
+     * @author wsq
+     * @since 2021/6/30 10:45
+     * @param file: excel 表格（包含学号、姓名、电话号码）
+     * @return com.xiaoTools.core.result.Result
+    */
+    @SaCheckRole("admin")
+    @PostMapping("/addUser")
+    public Result addUser(@RequestHeader(value = "satoken")String token,@RequestPart MultipartFile file) {
+        return userService.adminAddUser(file,"/user/adminAddUser");
+    }
+
+    /**
+     *
+     * @description: 批量添加前下载 excel 模板
+     * @author wsq
+     * @since 2021/7/1 16:06
+     * @param response:
+     * @return void
+    */
+    @GetMapping("/addUserModule")
+    public void addUserModule(HttpServletResponse response){
+        userService.adminAddUserModule(response);
+
+    }
+
+    /**
+     *
      * @description: 管理员查看所有用户
      * @author wsq
      * @since 2021/6/28 11:33
 
      * @return com.xiaoTools.core.result.Result
     */
+    @SaCheckRole("admin")
     @GetMapping("/selectAllUser")
-    public Result selectAllUser(){
+    public Result selectAllUser(@RequestHeader(value = "satoken")String token){
         return userService.selectAllUser("/user/selectAllUser");
     }
 
@@ -69,14 +100,11 @@ public class AdminController {
         }
         //用户是管理员
         if (user.getRole().equals("admin")) {
-            //定义一个无重复的键
-            String key = IdUtil.fastUUID();
-            //将键和 user 放入 redis 中，设置时间为7天
-            redisTemplate.opsForValue().set(key,user,7, TimeUnit.DAYS);
+            StpUtil.login(user.getId());
             // result 中包含两个信息：登陆成功；和 user 对应的 key
             Map<String,String> result = new HashMap<>(2);
             result.put("info","登录成功");
-            result.put("token",key);
+            result.put("token",StpUtil.getTokenValue());
             //将信息传给前端
             return new Result().result200(result,"/user/adminLogin");
         }

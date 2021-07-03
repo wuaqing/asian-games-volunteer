@@ -7,6 +7,9 @@ import com.wsq.code.entity.user.UserLogin;
 import com.wsq.code.entity.user.UserRegister;
 import com.wsq.code.entity.user.UserUpdate;
 import com.xiaoTools.core.result.Result;
+import org.springframework.web.multipart.MultipartFile;
+
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * <p>
@@ -82,4 +85,25 @@ public interface UserService extends IService<User> {
      * @return com.xiaoTools.core.result.Result
     */
     Result selectAllUser(String path);
+
+    /**
+     *
+     * @description: 管理员批量添加用户
+     * @author wsq
+     * @since 2021/6/30 16:53
+     * @param file: excel 表格（包含学号、姓名、电话号码）
+     * @param path:
+     * @return com.xiaoTools.core.result.Result
+    */
+    Result adminAddUser(MultipartFile file, String path);
+
+    /**
+     *
+     * @description: 批量添加前下载 excel 模板
+     * @author wsq
+     * @since 2021/7/1 16:08
+     * @param response:
+     * @return void
+    */
+    void adminAddUserModule(HttpServletResponse response);
 }

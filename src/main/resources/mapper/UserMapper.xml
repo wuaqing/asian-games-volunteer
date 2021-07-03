@@ -42,4 +42,8 @@
             iuser.student_id = #{studentId}
         LIMIT 1;
     </select>
+
+    <select id="selectByStudentIdCount" resultType="java.lang.Integer">
+        SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = #{studentId};
+    </select>
 </mapper>
