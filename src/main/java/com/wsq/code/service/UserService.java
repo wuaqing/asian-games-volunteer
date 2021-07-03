@@ -2,10 +2,7 @@ package com.wsq.code.service;
 
 import com.wsq.code.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.wsq.code.entity.user.UpdatePassword;
-import com.wsq.code.entity.user.UserLogin;
-import com.wsq.code.entity.user.UserRegister;
-import com.wsq.code.entity.user.UserUpdate;
+import com.wsq.code.entity.user.*;
 import com.xiaoTools.core.result.Result;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -106,4 +103,26 @@ public interface UserService extends IService<User> {
      * @return void
     */
     void adminAddUserModule(HttpServletResponse response);
+
+    /**
+     *
+     * @description: 管理员删除用户
+     * @author wsq
+     * @since 2021/7/3 9:11
+     * @param id: 学生主键
+     * @param path:
+     * @return com.xiaoTools.core.result.Result
+    */
+    Result adminremoveUser(String id, String path);
+
+    /**
+     * 
+     * @description: 管理员修改用户信息
+     * @author wsq
+     * @since 2021/7/3 10:56
+     * @param userUpdate: 管理员修改用户信息实体类
+     * @param path: 
+     * @return com.xiaoTools.core.result.Result
+    */
+    Result adminUpdateUser(AdminUserUpdate userUpdate, String path);
 }

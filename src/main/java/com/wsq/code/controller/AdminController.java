@@ -4,6 +4,7 @@ package com.wsq.code.controller;
 import cn.dev33.satoken.annotation.SaCheckRole;
 import cn.dev33.satoken.stp.StpUtil;
 import com.wsq.code.entity.User;
+import com.wsq.code.entity.user.AdminUserUpdate;
 import com.wsq.code.entity.user.UserLogin;
 import com.wsq.code.service.UserService;
 import com.xiaoTools.core.result.Result;
@@ -42,6 +43,35 @@ public class AdminController {
 
     /**
      *
+     * @description: 管理员修改用户信息
+     * @author wsq
+     * @since 2021/7/3 11:02
+     * @param token:
+     * @param userUpdate: 管理员修改用户信息实体类
+     * @return com.xiaoTools.core.result.Result
+    */
+    @PostMapping("/updateUser")
+    public Result updateUser(@RequestHeader(value = "satoken")String token, @RequestBody AdminUserUpdate userUpdate){
+        return userService.adminUpdateUser(userUpdate,"/admin/updateUser");
+    }
+
+    /**
+     *
+     * @description: 管理员删除用户
+     * @author wsq
+     * @since 2021/7/3 9:09
+     * @param token:
+     * @param id: 学生主键
+     * @return com.xiaoTools.core.result.Result
+    */
+    @SaCheckRole("admin")
+    @DeleteMapping("/removeUser")
+    public Result removeUser(@RequestHeader(value = "satoken")String token,@RequestParam String id){
+        return userService.adminremoveUser(id,"/admin/removeUser");
+    }
+
+    /**
+     *
      * @description: 管理员批量添加用户
      * @author wsq
      * @since 2021/6/30 10:45
@@ -51,7 +81,7 @@ public class AdminController {
     @SaCheckRole("admin")
     @PostMapping("/addUser")
     public Result addUser(@RequestHeader(value = "satoken")String token,@RequestPart MultipartFile file) {
-        return userService.adminAddUser(file,"/user/adminAddUser");
+        return userService.adminAddUser(file,"/admin/addUser");
     }
 
     /**
@@ -79,7 +109,7 @@ public class AdminController {
     @SaCheckRole("admin")
     @GetMapping("/selectAllUser")
     public Result selectAllUser(@RequestHeader(value = "satoken")String token){
-        return userService.selectAllUser("/user/selectAllUser");
+        return userService.selectAllUser("/admin/selectAllUser");
     }
 
     /**
@@ -96,7 +126,7 @@ public class AdminController {
         User user = userService.login(userLogin);
         //用户信息错误
         if (user == null) {
-            return new Result().result403("登录信息填写错误，请重新输入","/user/adminLogin");
+            return new Result().result403("登录信息填写错误，请重新输入","/admin/adminLogin");
         }
         //用户是管理员
         if (user.getRole().equals("admin")) {
@@ -106,10 +136,10 @@ public class AdminController {
             result.put("info","登录成功");
             result.put("token",StpUtil.getTokenValue());
             //将信息传给前端
-            return new Result().result200(result,"/user/adminLogin");
+            return new Result().result200(result,"/admin/adminLogin");
         }
         //用户信息不是管理员
-        return new Result().result403("您不是管理员，请选择用户登录","/user/adminLogin");
+        return new Result().result403("您不是管理员，请选择用户登录","/admin/adminLogin");
     }
 
 

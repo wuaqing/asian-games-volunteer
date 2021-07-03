@@ -94,8 +94,10 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         if(userRegister.getName() == null){
             return new Result().result403("注册失败，请填写姓名",path);
         }
+        String girl = "女";
+        String boy = "男";
         //判断性别
-        if ( ! userRegister.getSex().equals("女") && ! userRegister.getSex().equals("男")){
+        if ( ! girl.equals(userRegister.getSex()) && ! boy.equals(userRegister.getSex())){
             return new Result().result403("注册失败，性别请填写\"女\"或者\"男\"",path);
         }
         //判断电话号码
@@ -160,10 +162,12 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         User user = (User) redisTemplate.opsForValue().get(token);
         // user 为空，返回
         if (user == null) {
-            return new Result().result200("用户未登录",path);
+            return new Result().result403("用户未登录",path);
         }
+        String girl = "女";
+        String boy = "男";
         //判断性别
-        if ( ! userUpdate.getSex().equals("女") && ! userUpdate.getSex().equals("男")){
+        if ( ! girl.equals(userUpdate.getSex()) && ! boy.equals(userUpdate.getSex())){
             return new Result().result403("修改失败，性别请填写\"女\"或者\"男\"",path);
         }
         //判断电话号码
@@ -344,6 +348,84 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    /**
+     *
+     * @description: 管理员删除用户
+     * @author wsq
+     * @since 2021/7/3 9:11
+     * @param id: 学生主键
+     * @param path:
+     * @return com.xiaoTools.core.result.Result
+    */
+    @Override
+    public Result adminremoveUser(String id, String path) {
+        if (this.removeById(id)) {
+            return new Result().result200("删除成功",path);
+        }
+        return new Result().result403("删除失败",path);
+    }
+
+    /**
+     *
+     * @description: 管理员修改用户信息
+     * @author wsq
+     * @since 2021/7/3 11:03
+     * @param userUpdate: 管理员修改用户信息实体类
+     * @param path:
+     * @return com.xiaoTools.core.result.Result
+    */
+    @Override
+    public Result adminUpdateUser(AdminUserUpdate userUpdate, String path) {
+        // 在数据库中找不到该 id 的用户
+        if (this.getById(userUpdate.getId()) == null) {
+            return new Result().result403("请选择用户，修改失败",path);
+        }
+        String girl = "女";
+        String boy = "男";
+        //判断性别
+        if ( ! girl.equals(userUpdate.getSex()) && ! boy.equals(userUpdate.getSex())){
+            return new Result().result403("修改失败，性别请填写\"女\"或者\"男\"",path);
+        }
+        //判断电话号码
+        if ( ! Validation.isMobile(userUpdate.getTelephone())) {
+            return new Result().result403("修改失败，电话号码不正确",path);
+        }
+        //判断语言
+        if (userUpdate.getLanguage() == null){
+            return new Result().result403("修改失败，请至少填写一门外语",path);
+        }
+        //判断工作岗位
+        Job byId = jobService.getById(userUpdate.getJob());
+        if (byId == null){
+            return new Result().result403("修改失败，请填写正确的工作岗位",path);
+        }
+        //判断年龄
+        if (userUpdate.getAge() < 18 || userUpdate.getAge() > 100){
+            return new Result().result403("修改失败，年龄需要18——100岁",path);
+        }
+
+        // 将 userUpdate 中的信息放入同一 id 的 User 实体类中
+        User user = BeanUtil.copy(userUpdate, User.class).setId(userUpdate.getId());
+        //是否重置密码
+        if (userUpdate.getPassword()){
+            //重置密码
+            user.setPassword(MD5Utils.code("123456"));
+        }
+        //在数据库中根据 id 寻找 user 并修改信息
+        boolean update = this.updateById(user);
+        //修改成功
+        if (update){
+            //需要重置密码
+            if (userUpdate.getPassword()){
+                return new Result().result200("修改成功，密码为123456",path);
+            }
+            //不需要重置密码
+            return new Result().result200("修改成功",path);
+        }
+        //修改失败
+        return new Result().result403("修改失败",path);
     }
 
 }

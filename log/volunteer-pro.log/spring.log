@@ -1,624 +1,151 @@
-2021-07-01 08:51:38.806  INFO 25784 --- [main] com.wsq.AsianGamesVolunteerApplication   : Starting AsianGamesVolunteerApplication using Java 1.8.0_131 on DESKTOP-66NJ4C7 with PID 25784 (D:\INetItems\asian-games-volunteer\target\classes started by 晴 in D:\INetItems\asian-games-volunteer)
-2021-07-01 08:51:38.817 DEBUG 25784 --- [main] com.wsq.AsianGamesVolunteerApplication   : Running with Spring Boot v2.5.1, Spring v5.3.8
-2021-07-01 08:51:38.817  INFO 25784 --- [main] com.wsq.AsianGamesVolunteerApplication   : No active profile set, falling back to default profiles: default
-2021-07-01 08:51:40.067  INFO 25784 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-07-01 08:51:40.122  INFO 25784 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-07-01 08:51:40.172  INFO 25784 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 0 Redis repository interfaces.
-2021-07-01 08:51:40.568  INFO 25784 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.wsq.code.config.RedisConfig$$EnhancerBySpringCGLIB$$d22b71a8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-07-01 08:51:40.942  INFO 25784 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2021-07-01 08:51:40.950  INFO 25784 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-01 08:51:40.951  INFO 25784 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
-2021-07-01 08:51:40.953  INFO 25784 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
-2021-07-01 08:51:40.953  INFO 25784 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-2021-07-01 08:51:40.953  INFO 25784 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2021-07-01 08:51:41.037  INFO 25784 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
-2021-07-01 08:51:41.206  INFO 25784 --- [main] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring embedded WebApplicationContext
-2021-07-01 08:51:41.206  INFO 25784 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2309 ms
-2021-07-01 08:51:44.702  INFO 25784 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-07-01 08:51:44.945  INFO 25784 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/volunteer'
-2021-07-01 08:51:45.258  INFO 25784 --- [main] com.wsq.AsianGamesVolunteerApplication   : Started AsianGamesVolunteerApplication in 6.962 seconds (JVM running for 8.839)
-2021-07-01 08:56:01.443  INFO 23828 --- [main] com.wsq.AsianGamesVolunteerApplication   : Starting AsianGamesVolunteerApplication using Java 1.8.0_131 on DESKTOP-66NJ4C7 with PID 23828 (D:\INetItems\asian-games-volunteer\target\classes started by 晴 in D:\INetItems\asian-games-volunteer)
-2021-07-01 08:56:01.446 DEBUG 23828 --- [main] com.wsq.AsianGamesVolunteerApplication   : Running with Spring Boot v2.5.1, Spring v5.3.8
-2021-07-01 08:56:01.447  INFO 23828 --- [main] com.wsq.AsianGamesVolunteerApplication   : No active profile set, falling back to default profiles: default
-2021-07-01 08:56:02.623  INFO 23828 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-07-01 08:56:02.625  INFO 23828 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-07-01 08:56:02.656  INFO 23828 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
-2021-07-01 08:56:03.028  INFO 23828 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.wsq.code.config.RedisConfig$$EnhancerBySpringCGLIB$$47593cf3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-07-01 08:56:03.342  INFO 23828 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2021-07-01 08:56:03.355  INFO 23828 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-01 08:56:03.355  INFO 23828 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
-2021-07-01 08:56:03.357  INFO 23828 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
-2021-07-01 08:56:03.358  INFO 23828 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-2021-07-01 08:56:03.358  INFO 23828 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2021-07-01 08:56:03.364  INFO 23828 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
-2021-07-01 08:56:03.506  INFO 23828 --- [main] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring embedded WebApplicationContext
-2021-07-01 08:56:03.508  INFO 23828 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2001 ms
-2021-07-01 08:56:06.955  INFO 23828 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-07-01 08:56:07.264  INFO 23828 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/volunteer'
-2021-07-01 08:56:07.576  INFO 23828 --- [main] com.wsq.AsianGamesVolunteerApplication   : Started AsianGamesVolunteerApplication in 6.64 seconds (JVM running for 8.414)
-2021-07-01 08:56:41.411  INFO 23828 --- [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-07-01 08:56:41.411  INFO 23828 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-07-01 08:56:41.414  INFO 23828 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2021-07-01 08:56:58.234 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 08:56:58.267 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 2019002126(String)
-2021-07-01 08:56:58.309 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 08:56:58.315 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 08:56:58.316 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 2019002129(String)
-2021-07-01 08:56:58.317 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 08:56:58.319 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 08:56:58.322 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 08:56:58.324 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 08:56:58.325 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 08:56:58.325 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 08:56:58.326 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 08:56:58.327 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 08:56:58.328 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 2019002120(String)
-2021-07-01 08:56:58.329 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 08:56:58.330 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 08:56:58.331 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 08:56:58.332 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 08:56:58.335 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 08:56:58.336 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 222(String)
-2021-07-01 08:56:58.340 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 08:56:58.341 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 08:56:58.341 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 08:56:58.343 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 08:56:58.345 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 08:56:58.345 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 08:56:58.346 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 08:56:58.347 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 08:56:58.348 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 222(String)
-2021-07-01 08:56:58.349 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 08:56:58.349 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 08:56:58.350 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 08:56:58.354 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 08:56:58.357 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 08:56:58.357 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 08:56:58.359 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 08:56:58.360 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 08:56:58.360 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 08:56:58.361 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 08:56:58.362 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 08:56:58.362 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 08:56:58.363 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 08:56:58.364 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 08:56:58.364 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 08:56:58.365 DEBUG 23828 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 08:56:58.373  WARN 23828 --- [http-nio-8081-exec-9] c.wsq.code.service.impl.UserServiceImpl  : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@355727ad] Transaction not enabled
-2021-07-01 08:56:58.408 DEBUG 23828 --- [http-nio-8081-exec-9] com.wsq.code.mapper.UserMapper.insert    : ==>  Preparing: INSERT INTO table_user ( id, student_id, password, name, telephone, role ) VALUES ( ?, ?, ?, ?, ?, ? )
-2021-07-01 08:56:58.410 DEBUG 23828 --- [http-nio-8081-exec-9] com.wsq.code.mapper.UserMapper.insert    : ==> Parameters: 46994d68e33ffa69e537ea016da2f1cf(String), 2019002126(String), e10adc3949ba59abbe56e057f20f883e(String), hcy(String), 17605818915(String), user(String)
-2021-07-01 09:00:03.916  INFO 19324 --- [main] com.wsq.AsianGamesVolunteerApplication   : Starting AsianGamesVolunteerApplication using Java 1.8.0_131 on DESKTOP-66NJ4C7 with PID 19324 (D:\INetItems\asian-games-volunteer\target\classes started by 晴 in D:\INetItems\asian-games-volunteer)
-2021-07-01 09:00:03.919 DEBUG 19324 --- [main] com.wsq.AsianGamesVolunteerApplication   : Running with Spring Boot v2.5.1, Spring v5.3.8
-2021-07-01 09:00:03.920  INFO 19324 --- [main] com.wsq.AsianGamesVolunteerApplication   : No active profile set, falling back to default profiles: default
-2021-07-01 09:00:05.428  INFO 19324 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-07-01 09:00:05.430  INFO 19324 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-07-01 09:00:05.469  INFO 19324 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
-2021-07-01 09:00:05.958  INFO 19324 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.wsq.code.config.RedisConfig$$EnhancerBySpringCGLIB$$f1e322b8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-07-01 09:00:06.398  INFO 19324 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2021-07-01 09:00:06.411  INFO 19324 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-01 09:00:06.411  INFO 19324 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
-2021-07-01 09:00:06.413  INFO 19324 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
-2021-07-01 09:00:06.413  INFO 19324 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-2021-07-01 09:00:06.414  INFO 19324 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2021-07-01 09:00:06.479  INFO 19324 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
-2021-07-01 09:00:06.701  INFO 19324 --- [main] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring embedded WebApplicationContext
-2021-07-01 09:00:06.702  INFO 19324 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2705 ms
-2021-07-01 09:00:11.379  INFO 19324 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-07-01 09:00:11.727  INFO 19324 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/volunteer'
-2021-07-01 09:00:12.165  INFO 19324 --- [main] com.wsq.AsianGamesVolunteerApplication   : Started AsianGamesVolunteerApplication in 8.901 seconds (JVM running for 11.331)
-2021-07-01 09:00:22.196  INFO 19324 --- [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-07-01 09:00:22.197  INFO 19324 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-07-01 09:00:22.202  INFO 19324 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
-2021-07-01 09:00:57.960 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:00:57.996 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 2019002126(String)
-2021-07-01 09:00:58.032 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:00:58.042 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:00:58.042 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 2019002129(String)
-2021-07-01 09:00:58.044 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:00:58.045 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:00:58.045 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 09:00:58.046 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:00:58.047 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:00:58.047 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 09:00:58.048 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:00:58.049 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:00:58.050 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 2019002120(String)
-2021-07-01 09:00:58.051 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:00:58.052 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:00:58.054 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 09:00:58.056 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:00:58.056 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:00:58.057 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 222(String)
-2021-07-01 09:00:58.059 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:00:58.059 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:00:58.059 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 09:00:58.061 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:00:58.062 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:00:58.062 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 09:00:58.064 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:00:58.065 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:00:58.065 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 222(String)
-2021-07-01 09:00:58.066 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:00:58.066 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:00:58.067 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 09:00:58.068 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:00:58.069 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:00:58.070 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 09:00:58.073 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:00:58.074 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:00:58.074 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 09:00:58.076 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:00:58.076 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:00:58.076 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 09:00:58.077 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:00:58.078 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:00:58.079 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 09:00:58.080 DEBUG 19324 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:00:58.084  WARN 19324 --- [http-nio-8081-exec-9] c.wsq.code.service.impl.UserServiceImpl  : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@37321d63] Transaction not enabled
-2021-07-01 09:00:58.113 DEBUG 19324 --- [http-nio-8081-exec-9] com.wsq.code.mapper.UserMapper.insert    : ==>  Preparing: INSERT INTO table_user ( id, student_id, password, name, telephone, role ) VALUES ( ?, ?, ?, ?, ?, ? )
-2021-07-01 09:00:58.116 DEBUG 19324 --- [http-nio-8081-exec-9] com.wsq.code.mapper.UserMapper.insert    : ==> Parameters: 339dd19baa44215cabfa998c6f5e2d4a(String), 2019002126(String), e10adc3949ba59abbe56e057f20f883e(String), hcy(String), 17605818915(String), user(String)
-2021-07-01 09:12:26.727  INFO 23156 --- [main] com.wsq.AsianGamesVolunteerApplication   : Starting AsianGamesVolunteerApplication using Java 1.8.0_131 on DESKTOP-66NJ4C7 with PID 23156 (D:\INetItems\asian-games-volunteer\target\classes started by 晴 in D:\INetItems\asian-games-volunteer)
-2021-07-01 09:12:26.731 DEBUG 23156 --- [main] com.wsq.AsianGamesVolunteerApplication   : Running with Spring Boot v2.5.1, Spring v5.3.8
-2021-07-01 09:12:26.731  INFO 23156 --- [main] com.wsq.AsianGamesVolunteerApplication   : No active profile set, falling back to default profiles: default
-2021-07-01 09:12:28.315  INFO 23156 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-07-01 09:12:28.320  INFO 23156 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-07-01 09:12:28.361  INFO 23156 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 0 Redis repository interfaces.
-2021-07-01 09:12:28.850  INFO 23156 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.wsq.code.config.RedisConfig$$EnhancerBySpringCGLIB$$f1e322b8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-07-01 09:12:29.221  INFO 23156 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2021-07-01 09:12:29.232  INFO 23156 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-01 09:12:29.232  INFO 23156 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
-2021-07-01 09:12:29.235  INFO 23156 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
-2021-07-01 09:12:29.237  INFO 23156 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-2021-07-01 09:12:29.238  INFO 23156 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2021-07-01 09:12:29.243  INFO 23156 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
-2021-07-01 09:12:29.494  INFO 23156 --- [main] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring embedded WebApplicationContext
-2021-07-01 09:12:29.494  INFO 23156 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2685 ms
-2021-07-01 09:12:34.160  INFO 23156 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-07-01 09:12:34.460  INFO 23156 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/volunteer'
-2021-07-01 09:12:34.862  INFO 23156 --- [main] com.wsq.AsianGamesVolunteerApplication   : Started AsianGamesVolunteerApplication in 8.894 seconds (JVM running for 11.361)
-2021-07-01 09:12:52.738  INFO 23156 --- [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-07-01 09:12:52.738  INFO 23156 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-07-01 09:12:52.741  INFO 23156 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2021-07-01 09:13:07.653 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:13:07.693 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 2019002126(String)
-2021-07-01 09:13:07.731 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:13:07.733 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:13:07.734 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 2019002129(String)
-2021-07-01 09:13:07.736 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:13:07.742 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:13:07.743 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 09:13:07.745 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:13:07.745 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:13:07.746 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 09:13:07.747 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:13:07.748 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:13:07.749 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 2019002120(String)
-2021-07-01 09:13:07.750 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:13:07.751 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:13:07.752 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 09:13:07.753 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:13:07.754 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:13:07.754 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 222(String)
-2021-07-01 09:13:07.758 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:13:07.759 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:13:07.760 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 09:13:07.761 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:13:07.762 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:13:07.763 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 09:13:07.765 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:13:07.765 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:13:07.766 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 222(String)
-2021-07-01 09:13:07.767 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:13:07.768 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:13:07.769 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 09:13:07.770 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:13:07.771 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:13:07.772 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 09:13:07.775 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:13:07.776 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:13:07.777 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 09:13:07.778 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:13:07.779 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:13:07.779 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 09:13:07.780 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:13:07.781 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:13:07.782 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 09:13:07.784 DEBUG 23156 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:23:32.542  INFO 23412 --- [main] com.wsq.AsianGamesVolunteerApplication   : Starting AsianGamesVolunteerApplication using Java 1.8.0_131 on DESKTOP-66NJ4C7 with PID 23412 (D:\INetItems\asian-games-volunteer\target\classes started by 晴 in D:\INetItems\asian-games-volunteer)
-2021-07-01 09:23:32.547 DEBUG 23412 --- [main] com.wsq.AsianGamesVolunteerApplication   : Running with Spring Boot v2.5.1, Spring v5.3.8
-2021-07-01 09:23:32.547  INFO 23412 --- [main] com.wsq.AsianGamesVolunteerApplication   : No active profile set, falling back to default profiles: default
-2021-07-01 09:23:33.727  INFO 23412 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-07-01 09:23:33.729  INFO 23412 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-07-01 09:23:33.761  INFO 23412 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
-2021-07-01 09:23:34.132  INFO 23412 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.wsq.code.config.RedisConfig$$EnhancerBySpringCGLIB$$47593cf3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-07-01 09:23:34.448  INFO 23412 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2021-07-01 09:23:34.460  INFO 23412 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-01 09:23:34.460  INFO 23412 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
-2021-07-01 09:23:34.462  INFO 23412 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
-2021-07-01 09:23:34.463  INFO 23412 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-2021-07-01 09:23:34.463  INFO 23412 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2021-07-01 09:23:34.466  INFO 23412 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
-2021-07-01 09:23:34.656  INFO 23412 --- [main] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring embedded WebApplicationContext
-2021-07-01 09:23:34.657  INFO 23412 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2044 ms
-2021-07-01 09:23:38.365  INFO 23412 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-07-01 09:23:38.614  INFO 23412 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/volunteer'
-2021-07-01 09:23:38.945  INFO 23412 --- [main] com.wsq.AsianGamesVolunteerApplication   : Started AsianGamesVolunteerApplication in 6.912 seconds (JVM running for 8.947)
-2021-07-01 09:23:57.994  INFO 23412 --- [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-07-01 09:23:57.995  INFO 23412 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-07-01 09:23:58.000  INFO 23412 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
-2021-07-01 09:25:53.414 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:25:53.453 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 2019002126(String)
-2021-07-01 09:25:53.492 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:25:53.499 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:25:53.500 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 2019002129(String)
-2021-07-01 09:25:53.502 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:25:53.503 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:25:53.503 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 09:25:53.504 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:25:53.505 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:25:53.506 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 09:25:53.509 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:25:53.510 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:25:53.511 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 2019002120(String)
-2021-07-01 09:25:53.512 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:25:53.513 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:25:53.514 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 09:25:53.515 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:25:53.515 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:25:53.516 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 222(String)
-2021-07-01 09:25:53.517 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:25:53.518 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:25:53.518 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 09:25:53.520 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:25:53.521 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:25:53.522 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 09:25:53.523 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:25:53.526 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:25:53.526 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 222(String)
-2021-07-01 09:25:53.527 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:25:53.528 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:25:53.529 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 09:25:53.530 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:25:53.531 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:25:53.531 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 09:25:53.532 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:25:53.533 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:25:53.534 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 09:25:53.535 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:25:53.536 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:25:53.536 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 09:25:53.537 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:25:53.538 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:25:53.538 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 09:25:53.540 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:25:53.546  WARN 23412 --- [http-nio-8081-exec-9] c.wsq.code.service.impl.UserServiceImpl  : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6430c889] Transaction not enabled
-2021-07-01 09:25:53.576 DEBUG 23412 --- [http-nio-8081-exec-9] com.wsq.code.mapper.UserMapper.insert    : ==>  Preparing: INSERT INTO table_user ( id, student_id, password, name, telephone, role ) VALUES ( ?, ?, ?, ?, ?, ? )
-2021-07-01 09:25:53.579 DEBUG 23412 --- [http-nio-8081-exec-9] com.wsq.code.mapper.UserMapper.insert    : ==> Parameters: f60f164f7c7b5c13ec0e71854d3c0037(String), 2019002126(String), e10adc3949ba59abbe56e057f20f883e(String), hcy(String), 17605818915(String), user(String)
-2021-07-01 09:35:09.599 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:35:09.600 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 2019002126(String)
-2021-07-01 09:35:09.606 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:35:09.607 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:35:09.608 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 2019002129(String)
-2021-07-01 09:35:09.609 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:35:09.610 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:35:09.611 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 09:35:09.612 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:35:09.613 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:35:09.613 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 09:35:09.614 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:35:09.615 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:35:09.615 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 2019002120(String)
-2021-07-01 09:35:09.617 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:35:09.619 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:35:09.620 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 09:35:09.622 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:35:09.623 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:35:09.623 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 222(String)
-2021-07-01 09:35:09.624 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:35:09.625 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:35:09.625 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 09:35:09.626 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:35:09.627 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:35:09.628 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 09:35:09.629 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:35:09.630 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:35:09.630 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 222(String)
-2021-07-01 09:35:09.631 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:35:09.632 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:35:09.633 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 09:35:09.634 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:35:09.636 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:35:09.637 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 09:35:09.638 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:35:09.639 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:35:09.639 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 09:35:09.640 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:35:09.641 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:35:09.641 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 09:35:09.643 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:35:09.643 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:35:09.644 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 111(String)
-2021-07-01 09:35:09.645 DEBUG 23412 --- [http-nio-8081-exec-1] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:36:27.745 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:36:27.746 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 2019002126(String)
-2021-07-01 09:36:27.747 DEBUG 23412 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:36:27.748  WARN 23412 --- [http-nio-8081-exec-9] c.wsq.code.service.impl.UserServiceImpl  : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7a529610] Transaction not enabled
-2021-07-01 09:36:27.749 DEBUG 23412 --- [http-nio-8081-exec-9] com.wsq.code.mapper.UserMapper.insert    : ==>  Preparing: INSERT INTO table_user ( id, student_id, password, name, telephone, role ) VALUES ( ?, ?, ?, ?, ?, ? )
-2021-07-01 09:36:27.750 DEBUG 23412 --- [http-nio-8081-exec-9] com.wsq.code.mapper.UserMapper.insert    : ==> Parameters: a17b9db5dda7ec14ebf9e8061f2d31b1(String), 2019002126(String), e10adc3949ba59abbe56e057f20f883e(String), hcy(String), 17605818915(String), user(String)
-2021-07-01 09:37:07.000 DEBUG 23412 --- [http-nio-8081-exec-10] c.w.c.m.U.selectByStudentIdAndPassword   : ==>  Preparing: SELECT iuser.id AS id, iuser.student_id AS studentId, iuser.`password` AS `password`, iuser.`name` AS `name`, iuser.sex AS sex, iuser.telephone AS telephone, iuser.`language` AS `language`, iuser.job AS job, iuser.age AS age, iuser.role AS role FROM table_user AS iuser WHERE iuser.student_id = ? AND iuser.`password` = ? LIMIT 1;
-2021-07-01 09:37:07.001 DEBUG 23412 --- [http-nio-8081-exec-10] c.w.c.m.U.selectByStudentIdAndPassword   : ==> Parameters: 2019002126(String), e10adc3949ba59abbe56e057f20f883e(String)
-2021-07-01 09:37:07.056 DEBUG 23412 --- [http-nio-8081-exec-10] c.w.c.m.U.selectByStudentIdAndPassword   : <==      Total: 1
-2021-07-01 09:38:58.294  INFO 25844 --- [main] com.wsq.AsianGamesVolunteerApplication   : Starting AsianGamesVolunteerApplication using Java 1.8.0_131 on DESKTOP-66NJ4C7 with PID 25844 (D:\INetItems\asian-games-volunteer\target\classes started by 晴 in D:\INetItems\asian-games-volunteer)
-2021-07-01 09:38:58.299 DEBUG 25844 --- [main] com.wsq.AsianGamesVolunteerApplication   : Running with Spring Boot v2.5.1, Spring v5.3.8
-2021-07-01 09:38:58.299  INFO 25844 --- [main] com.wsq.AsianGamesVolunteerApplication   : No active profile set, falling back to default profiles: default
-2021-07-01 09:38:59.818  INFO 25844 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-07-01 09:38:59.820  INFO 25844 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-07-01 09:38:59.864  INFO 25844 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
-2021-07-01 09:39:00.346  INFO 25844 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.wsq.code.config.RedisConfig$$EnhancerBySpringCGLIB$$3c7d559a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-07-01 09:39:00.734  INFO 25844 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2021-07-01 09:39:00.746  INFO 25844 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-01 09:39:00.747  INFO 25844 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
-2021-07-01 09:39:00.748  INFO 25844 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
-2021-07-01 09:39:00.749  INFO 25844 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-2021-07-01 09:39:00.749  INFO 25844 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2021-07-01 09:39:00.755  INFO 25844 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
-2021-07-01 09:39:00.925  INFO 25844 --- [main] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring embedded WebApplicationContext
-2021-07-01 09:39:00.925  INFO 25844 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2541 ms
-2021-07-01 09:39:05.525  INFO 25844 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-07-01 09:39:05.843  INFO 25844 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/volunteer'
-2021-07-01 09:39:06.297  INFO 25844 --- [main] com.wsq.AsianGamesVolunteerApplication   : Started AsianGamesVolunteerApplication in 8.675 seconds (JVM running for 10.907)
-2021-07-01 09:39:57.683  INFO 25844 --- [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-07-01 09:39:57.684  INFO 25844 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-07-01 09:39:57.691  INFO 25844 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
-2021-07-01 09:40:13.478 DEBUG 25844 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdAndPassword   : ==>  Preparing: SELECT iuser.id AS id, iuser.student_id AS studentId, iuser.`password` AS `password`, iuser.`name` AS `name`, iuser.sex AS sex, iuser.telephone AS telephone, iuser.`language` AS `language`, iuser.job AS job, iuser.age AS age, iuser.role AS role FROM table_user AS iuser WHERE iuser.student_id = ? AND iuser.`password` = ? LIMIT 1;
-2021-07-01 09:40:13.516 DEBUG 25844 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdAndPassword   : ==> Parameters: 222(String), bcbe3365e6ac95ea2c0343a2395834dd(String)
-2021-07-01 09:40:13.555 DEBUG 25844 --- [http-nio-8081-exec-7] c.w.c.m.U.selectByStudentIdAndPassword   : <==      Total: 1
-2021-07-01 09:40:59.729 DEBUG 25844 --- [http-nio-8081-exec-9] c.wsq.code.mapper.UserMapper.selectById  : ==>  Preparing: SELECT id,student_id,password,name,sex,telephone,language,job,age,role FROM table_user WHERE id=?
-2021-07-01 09:40:59.731 DEBUG 25844 --- [http-nio-8081-exec-9] c.wsq.code.mapper.UserMapper.selectById  : ==> Parameters: 222(String)
-2021-07-01 09:40:59.740 DEBUG 25844 --- [http-nio-8081-exec-9] c.wsq.code.mapper.UserMapper.selectById  : <==      Total: 1
-2021-07-01 09:41:00.646 DEBUG 25844 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:41:00.647 DEBUG 25844 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 2019002126(String)
-2021-07-01 09:41:00.654 DEBUG 25844 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:41:00.661  WARN 25844 --- [http-nio-8081-exec-9] c.wsq.code.service.impl.UserServiceImpl  : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@d7c1236] Transaction not enabled
-2021-07-01 09:41:00.693 DEBUG 25844 --- [http-nio-8081-exec-9] com.wsq.code.mapper.UserMapper.insert    : ==>  Preparing: INSERT INTO table_user ( id, student_id, password, name, telephone, role ) VALUES ( ?, ?, ?, ?, ?, ? )
-2021-07-01 09:41:00.696 DEBUG 25844 --- [http-nio-8081-exec-9] com.wsq.code.mapper.UserMapper.insert    : ==> Parameters: 4503ed05962405f164fd3176aa5f9934(String), 2019002126(String), e10adc3949ba59abbe56e057f20f883e(String), hcy(String), 17605818915(String), user(String)
-2021-07-01 09:42:06.628  INFO 376 --- [main] com.wsq.AsianGamesVolunteerApplication   : Starting AsianGamesVolunteerApplication using Java 1.8.0_131 on DESKTOP-66NJ4C7 with PID 376 (D:\INetItems\asian-games-volunteer\target\classes started by 晴 in D:\INetItems\asian-games-volunteer)
-2021-07-01 09:42:06.631 DEBUG 376 --- [main] com.wsq.AsianGamesVolunteerApplication   : Running with Spring Boot v2.5.1, Spring v5.3.8
-2021-07-01 09:42:06.632  INFO 376 --- [main] com.wsq.AsianGamesVolunteerApplication   : No active profile set, falling back to default profiles: default
-2021-07-01 09:42:08.145  INFO 376 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-07-01 09:42:08.149  INFO 376 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-07-01 09:42:08.187  INFO 376 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 0 Redis repository interfaces.
-2021-07-01 09:42:08.683  INFO 376 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.wsq.code.config.RedisConfig$$EnhancerBySpringCGLIB$$ed2aac31] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-07-01 09:42:09.058  INFO 376 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2021-07-01 09:42:09.069  INFO 376 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-01 09:42:09.070  INFO 376 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
-2021-07-01 09:42:09.072  INFO 376 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
-2021-07-01 09:42:09.072  INFO 376 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-2021-07-01 09:42:09.072  INFO 376 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2021-07-01 09:42:09.080  INFO 376 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
-2021-07-01 09:42:09.315  INFO 376 --- [main] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring embedded WebApplicationContext
-2021-07-01 09:42:09.315  INFO 376 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2609 ms
-2021-07-01 09:42:13.876  INFO 376 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-07-01 09:42:14.246  INFO 376 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/volunteer'
-2021-07-01 09:42:14.697  INFO 376 --- [main] com.wsq.AsianGamesVolunteerApplication   : Started AsianGamesVolunteerApplication in 8.714 seconds (JVM running for 11.005)
-2021-07-01 09:43:03.997  INFO 376 --- [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-07-01 09:43:03.998  INFO 376 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-07-01 09:43:04.000  INFO 376 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2021-07-01 09:43:26.070 ERROR 376 --- [http-nio-8081-exec-5] com.wsq.code.config.GlobalException      : cn.dev33.satoken.exception.NotLoginException: token无效
-2021-07-01 09:43:45.940 DEBUG 376 --- [http-nio-8081-exec-8] c.wsq.code.mapper.UserMapper.selectById  : ==>  Preparing: SELECT id,student_id,password,name,sex,telephone,language,job,age,role FROM table_user WHERE id=?
-2021-07-01 09:43:45.978 DEBUG 376 --- [http-nio-8081-exec-8] c.wsq.code.mapper.UserMapper.selectById  : ==> Parameters: 222(String)
-2021-07-01 09:43:46.016 DEBUG 376 --- [http-nio-8081-exec-8] c.wsq.code.mapper.UserMapper.selectById  : <==      Total: 1
-2021-07-01 09:43:46.905 DEBUG 376 --- [http-nio-8081-exec-8] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:43:46.906 DEBUG 376 --- [http-nio-8081-exec-8] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 2019002126(String)
-2021-07-01 09:43:46.913 DEBUG 376 --- [http-nio-8081-exec-8] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:44:03.046 DEBUG 376 --- [http-nio-8081-exec-9] c.wsq.code.mapper.UserMapper.selectById  : ==>  Preparing: SELECT id,student_id,password,name,sex,telephone,language,job,age,role FROM table_user WHERE id=?
-2021-07-01 09:44:03.046 DEBUG 376 --- [http-nio-8081-exec-9] c.wsq.code.mapper.UserMapper.selectById  : ==> Parameters: 222(String)
-2021-07-01 09:44:03.049 DEBUG 376 --- [http-nio-8081-exec-9] c.wsq.code.mapper.UserMapper.selectById  : <==      Total: 1
-2021-07-01 09:44:03.100 DEBUG 376 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-01 09:44:03.101 DEBUG 376 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 2019002126(String)
-2021-07-01 09:44:03.103 DEBUG 376 --- [http-nio-8081-exec-9] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-01 09:44:03.113  WARN 376 --- [http-nio-8081-exec-9] c.wsq.code.service.impl.UserServiceImpl  : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@267431d] Transaction not enabled
-2021-07-01 09:44:03.147 DEBUG 376 --- [http-nio-8081-exec-9] com.wsq.code.mapper.UserMapper.insert    : ==>  Preparing: INSERT INTO table_user ( id, student_id, password, name, telephone, role ) VALUES ( ?, ?, ?, ?, ?, ? )
-2021-07-01 09:44:03.149 DEBUG 376 --- [http-nio-8081-exec-9] com.wsq.code.mapper.UserMapper.insert    : ==> Parameters: c6420673a1f31f931ad6fab370763862(String), 2019002126(String), e10adc3949ba59abbe56e057f20f883e(String), hcy(String), 17605818915(String), user(String)
-2021-07-01 09:51:44.051  INFO 22244 --- [main] com.wsq.AsianGamesVolunteerApplication   : Starting AsianGamesVolunteerApplication using Java 1.8.0_131 on DESKTOP-66NJ4C7 with PID 22244 (D:\INetItems\asian-games-volunteer\target\classes started by 晴 in D:\INetItems\asian-games-volunteer)
-2021-07-01 09:51:44.058 DEBUG 22244 --- [main] com.wsq.AsianGamesVolunteerApplication   : Running with Spring Boot v2.5.1, Spring v5.3.8
-2021-07-01 09:51:44.058  INFO 22244 --- [main] com.wsq.AsianGamesVolunteerApplication   : No active profile set, falling back to default profiles: default
-2021-07-01 09:51:45.797  INFO 22244 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-07-01 09:51:45.803  INFO 22244 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-07-01 09:51:45.841  INFO 22244 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
-2021-07-01 09:51:46.339  INFO 22244 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.wsq.code.config.RedisConfig$$EnhancerBySpringCGLIB$$ed2aac31] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-07-01 09:51:46.776  INFO 22244 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2021-07-01 09:51:46.791  INFO 22244 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-01 09:51:46.791  INFO 22244 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
-2021-07-01 09:51:46.793  INFO 22244 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
-2021-07-01 09:51:46.794  INFO 22244 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-2021-07-01 09:51:46.794  INFO 22244 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2021-07-01 09:51:46.804  INFO 22244 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
-2021-07-01 09:51:47.046  INFO 22244 --- [main] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring embedded WebApplicationContext
-2021-07-01 09:51:47.046  INFO 22244 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2890 ms
-2021-07-01 09:51:51.596  INFO 22244 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-07-01 09:51:51.936  INFO 22244 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/volunteer'
-2021-07-01 09:51:52.384  INFO 22244 --- [main] com.wsq.AsianGamesVolunteerApplication   : Started AsianGamesVolunteerApplication in 9.032 seconds (JVM running for 11.509)
-2021-07-01 09:51:57.270  INFO 22244 --- [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-07-01 09:51:57.271  INFO 22244 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-07-01 09:51:57.273  INFO 22244 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2021-07-01 10:17:22.962  INFO 15956 --- [main] com.wsq.AsianGamesVolunteerApplication   : Starting AsianGamesVolunteerApplication using Java 1.8.0_131 on DESKTOP-66NJ4C7 with PID 15956 (D:\INetItems\asian-games-volunteer\target\classes started by 晴 in D:\INetItems\asian-games-volunteer)
-2021-07-01 10:17:22.964 DEBUG 15956 --- [main] com.wsq.AsianGamesVolunteerApplication   : Running with Spring Boot v2.5.1, Spring v5.3.8
-2021-07-01 10:17:22.965  INFO 15956 --- [main] com.wsq.AsianGamesVolunteerApplication   : No active profile set, falling back to default profiles: default
-2021-07-01 10:17:24.149  INFO 15956 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-07-01 10:17:24.151  INFO 15956 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-07-01 10:17:24.181  INFO 15956 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
-2021-07-01 10:17:24.570  INFO 15956 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.wsq.code.config.RedisConfig$$EnhancerBySpringCGLIB$$ed2aac31] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-07-01 10:17:24.855  INFO 15956 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2021-07-01 10:17:24.865  INFO 15956 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-01 10:17:24.867  INFO 15956 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
-2021-07-01 10:17:24.867  INFO 15956 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
-2021-07-01 10:17:24.868  INFO 15956 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-2021-07-01 10:17:24.869  INFO 15956 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2021-07-01 10:17:24.872  INFO 15956 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
-2021-07-01 10:17:25.113  INFO 15956 --- [main] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring embedded WebApplicationContext
-2021-07-01 10:17:25.113  INFO 15956 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2093 ms
-2021-07-01 10:17:28.598  INFO 15956 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-07-01 10:17:28.835  INFO 15956 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/volunteer'
-2021-07-01 10:17:29.181  INFO 15956 --- [main] com.wsq.AsianGamesVolunteerApplication   : Started AsianGamesVolunteerApplication in 6.722 seconds (JVM running for 8.938)
-2021-07-01 10:19:10.200  INFO 15956 --- [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-07-01 10:19:10.200  INFO 15956 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-07-01 10:19:10.204  INFO 15956 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2021-07-01 10:19:18.215 ERROR 15956 --- [http-nio-8081-exec-9] com.wsq.code.config.GlobalException      : java.lang.NullPointerException
-2021-07-01 10:57:20.806  INFO 12704 --- [main] com.wsq.AsianGamesVolunteerApplication   : Starting AsianGamesVolunteerApplication using Java 1.8.0_131 on DESKTOP-66NJ4C7 with PID 12704 (D:\INetItems\asian-games-volunteer\target\classes started by 晴 in D:\INetItems\asian-games-volunteer)
-2021-07-01 10:57:20.810 DEBUG 12704 --- [main] com.wsq.AsianGamesVolunteerApplication   : Running with Spring Boot v2.5.1, Spring v5.3.8
-2021-07-01 10:57:20.813  INFO 12704 --- [main] com.wsq.AsianGamesVolunteerApplication   : No active profile set, falling back to default profiles: default
-2021-07-01 10:57:22.341  INFO 12704 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-07-01 10:57:22.346  INFO 12704 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-07-01 10:57:22.388  INFO 12704 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
-2021-07-01 10:57:22.870  INFO 12704 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.wsq.code.config.RedisConfig$$EnhancerBySpringCGLIB$$6012cf8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-07-01 10:57:23.381  INFO 12704 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2021-07-01 10:57:23.394  INFO 12704 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-01 10:57:23.396  INFO 12704 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
-2021-07-01 10:57:23.397  INFO 12704 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
-2021-07-01 10:57:23.398  INFO 12704 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-2021-07-01 10:57:23.398  INFO 12704 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2021-07-01 10:57:23.458  INFO 12704 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
-2021-07-01 10:57:23.653  INFO 12704 --- [main] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring embedded WebApplicationContext
-2021-07-01 10:57:23.654  INFO 12704 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2759 ms
-2021-07-01 10:57:28.230  INFO 12704 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-07-01 10:57:28.619  INFO 12704 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/volunteer'
-2021-07-01 10:57:29.025  INFO 12704 --- [main] com.wsq.AsianGamesVolunteerApplication   : Started AsianGamesVolunteerApplication in 8.897 seconds (JVM running for 11.538)
-2021-07-01 10:57:37.898  INFO 12704 --- [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-07-01 10:57:37.899  INFO 12704 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-07-01 10:57:37.900  INFO 12704 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-07-01 10:57:45.013 ERROR 12704 --- [http-nio-8081-exec-7] com.wsq.code.config.GlobalException      : cn.hutool.core.io.IORuntimeException: FileNotFoundException: D:\INetItems\asian-games-volunteer\target\classes\static\test.xls (系统找不到指定的文件。)
-2021-07-01 10:58:29.274  INFO 25836 --- [main] com.wsq.AsianGamesVolunteerApplication   : Starting AsianGamesVolunteerApplication using Java 1.8.0_131 on DESKTOP-66NJ4C7 with PID 25836 (D:\INetItems\asian-games-volunteer\target\classes started by 晴 in D:\INetItems\asian-games-volunteer)
-2021-07-01 10:58:29.278 DEBUG 25836 --- [main] com.wsq.AsianGamesVolunteerApplication   : Running with Spring Boot v2.5.1, Spring v5.3.8
-2021-07-01 10:58:29.279  INFO 25836 --- [main] com.wsq.AsianGamesVolunteerApplication   : No active profile set, falling back to default profiles: default
-2021-07-01 10:58:30.842  INFO 25836 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-07-01 10:58:30.845  INFO 25836 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-07-01 10:58:30.896  INFO 25836 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 0 Redis repository interfaces.
-2021-07-01 10:58:31.437  INFO 25836 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.wsq.code.config.RedisConfig$$EnhancerBySpringCGLIB$$1f2d088a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-07-01 10:58:31.826  INFO 25836 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2021-07-01 10:58:31.838  INFO 25836 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-01 10:58:31.839  INFO 25836 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
-2021-07-01 10:58:31.841  INFO 25836 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
-2021-07-01 10:58:31.841  INFO 25836 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-2021-07-01 10:58:31.842  INFO 25836 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2021-07-01 10:58:31.846  INFO 25836 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
-2021-07-01 10:58:32.028  INFO 25836 --- [main] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring embedded WebApplicationContext
-2021-07-01 10:58:32.029  INFO 25836 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2666 ms
-2021-07-01 10:58:36.709  INFO 25836 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-07-01 10:58:37.061  INFO 25836 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/volunteer'
-2021-07-01 10:58:37.478  INFO 25836 --- [main] com.wsq.AsianGamesVolunteerApplication   : Started AsianGamesVolunteerApplication in 8.867 seconds (JVM running for 11.237)
-2021-07-01 10:58:41.181  INFO 25836 --- [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-07-01 10:58:41.181  INFO 25836 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-07-01 10:58:41.186  INFO 25836 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
-2021-07-01 10:58:41.304 ERROR 25836 --- [http-nio-8081-exec-1] com.wsq.code.config.GlobalException      : org.apache.poi.poifs.filesystem.OfficeXmlFileException: The supplied data appears to be in the Office 2007+ XML. You are calling the part of POI that deals with OLE2 Office Documents. You need to call a different part of POI to process this data (eg XSSF instead of HSSF)
-2021-07-01 11:00:40.678  INFO 25040 --- [main] com.wsq.AsianGamesVolunteerApplication   : Starting AsianGamesVolunteerApplication using Java 1.8.0_131 on DESKTOP-66NJ4C7 with PID 25040 (D:\INetItems\asian-games-volunteer\target\classes started by 晴 in D:\INetItems\asian-games-volunteer)
-2021-07-01 11:00:40.681 DEBUG 25040 --- [main] com.wsq.AsianGamesVolunteerApplication   : Running with Spring Boot v2.5.1, Spring v5.3.8
-2021-07-01 11:00:40.682  INFO 25040 --- [main] com.wsq.AsianGamesVolunteerApplication   : No active profile set, falling back to default profiles: default
-2021-07-01 11:00:42.010  INFO 25040 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-07-01 11:00:42.012  INFO 25040 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-07-01 11:00:42.043  INFO 25040 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
-2021-07-01 11:00:42.421  INFO 25040 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.wsq.code.config.RedisConfig$$EnhancerBySpringCGLIB$$6012cf8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-07-01 11:00:42.794  INFO 25040 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2021-07-01 11:00:42.805  INFO 25040 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-01 11:00:42.806  INFO 25040 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
-2021-07-01 11:00:42.807  INFO 25040 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
-2021-07-01 11:00:42.808  INFO 25040 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-2021-07-01 11:00:42.808  INFO 25040 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2021-07-01 11:00:42.812  INFO 25040 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
-2021-07-01 11:00:43.064  INFO 25040 --- [main] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring embedded WebApplicationContext
-2021-07-01 11:00:43.064  INFO 25040 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2319 ms
-2021-07-01 11:00:46.904  INFO 25040 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-07-01 11:00:47.183  INFO 25040 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/volunteer'
-2021-07-01 11:00:47.515  INFO 25040 --- [main] com.wsq.AsianGamesVolunteerApplication   : Started AsianGamesVolunteerApplication in 7.391 seconds (JVM running for 9.294)
-2021-07-01 11:01:01.852  INFO 25040 --- [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-07-01 11:01:01.853  INFO 25040 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-07-01 11:01:01.855  INFO 25040 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2021-07-01 11:01:05.462 ERROR 25040 --- [http-nio-8081-exec-7] com.wsq.code.config.GlobalException      : org.apache.poi.poifs.filesystem.OfficeXmlFileException: The supplied data appears to be in the Office 2007+ XML. You are calling the part of POI that deals with OLE2 Office Documents. You need to call a different part of POI to process this data (eg XSSF instead of HSSF)
-2021-07-01 11:10:36.409  INFO 22432 --- [main] com.wsq.AsianGamesVolunteerApplication   : Starting AsianGamesVolunteerApplication using Java 1.8.0_131 on DESKTOP-66NJ4C7 with PID 22432 (D:\INetItems\asian-games-volunteer\target\classes started by 晴 in D:\INetItems\asian-games-volunteer)
-2021-07-01 11:10:36.413 DEBUG 22432 --- [main] com.wsq.AsianGamesVolunteerApplication   : Running with Spring Boot v2.5.1, Spring v5.3.8
-2021-07-01 11:10:36.413  INFO 22432 --- [main] com.wsq.AsianGamesVolunteerApplication   : No active profile set, falling back to default profiles: default
-2021-07-01 11:10:37.974  INFO 22432 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-07-01 11:10:37.977  INFO 22432 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-07-01 11:10:38.025  INFO 22432 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 0 Redis repository interfaces.
-2021-07-01 11:10:38.569  INFO 22432 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.wsq.code.config.RedisConfig$$EnhancerBySpringCGLIB$$1f2d088a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-07-01 11:10:39.034  INFO 22432 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2021-07-01 11:10:39.047  INFO 22432 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-01 11:10:39.048  INFO 22432 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
-2021-07-01 11:10:39.050  INFO 22432 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
-2021-07-01 11:10:39.051  INFO 22432 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-2021-07-01 11:10:39.051  INFO 22432 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2021-07-01 11:10:39.111  INFO 22432 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
-2021-07-01 11:10:39.291  INFO 22432 --- [main] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring embedded WebApplicationContext
-2021-07-01 11:10:39.291  INFO 22432 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2796 ms
-2021-07-01 11:10:43.806  INFO 22432 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-07-01 11:10:44.178  INFO 22432 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/volunteer'
-2021-07-01 11:10:44.578  INFO 22432 --- [main] com.wsq.AsianGamesVolunteerApplication   : Started AsianGamesVolunteerApplication in 8.817 seconds (JVM running for 11.203)
-2021-07-01 11:10:50.422  INFO 22432 --- [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-07-01 11:10:50.422  INFO 22432 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-07-01 11:10:50.424  INFO 22432 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2021-07-01 11:11:58.535  INFO 2056 --- [main] com.wsq.AsianGamesVolunteerApplication   : Starting AsianGamesVolunteerApplication using Java 1.8.0_131 on DESKTOP-66NJ4C7 with PID 2056 (D:\INetItems\asian-games-volunteer\target\classes started by 晴 in D:\INetItems\asian-games-volunteer)
-2021-07-01 11:11:58.539 DEBUG 2056 --- [main] com.wsq.AsianGamesVolunteerApplication   : Running with Spring Boot v2.5.1, Spring v5.3.8
-2021-07-01 11:11:58.540  INFO 2056 --- [main] com.wsq.AsianGamesVolunteerApplication   : No active profile set, falling back to default profiles: default
-2021-07-01 11:12:00.063  INFO 2056 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-07-01 11:12:00.066  INFO 2056 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-07-01 11:12:00.103  INFO 2056 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
-2021-07-01 11:12:00.575  INFO 2056 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.wsq.code.config.RedisConfig$$EnhancerBySpringCGLIB$$47593cf3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-07-01 11:12:01.021  INFO 2056 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2021-07-01 11:12:01.035  INFO 2056 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-01 11:12:01.035  INFO 2056 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
-2021-07-01 11:12:01.037  INFO 2056 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
-2021-07-01 11:12:01.038  INFO 2056 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-2021-07-01 11:12:01.039  INFO 2056 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2021-07-01 11:12:01.045  INFO 2056 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
-2021-07-01 11:12:01.219  INFO 2056 --- [main] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring embedded WebApplicationContext
-2021-07-01 11:12:01.220  INFO 2056 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2605 ms
-2021-07-01 11:12:05.691  INFO 2056 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-07-01 11:12:05.988  INFO 2056 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/volunteer'
-2021-07-01 11:12:06.399  INFO 2056 --- [main] com.wsq.AsianGamesVolunteerApplication   : Started AsianGamesVolunteerApplication in 8.529 seconds (JVM running for 10.796)
-2021-07-01 11:12:24.314  INFO 2056 --- [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-07-01 11:12:24.314  INFO 2056 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-07-01 11:12:24.316  INFO 2056 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2021-07-01 11:13:55.952  INFO 25236 --- [main] com.wsq.AsianGamesVolunteerApplication   : Starting AsianGamesVolunteerApplication using Java 1.8.0_131 on DESKTOP-66NJ4C7 with PID 25236 (D:\INetItems\asian-games-volunteer\target\classes started by 晴 in D:\INetItems\asian-games-volunteer)
-2021-07-01 11:13:55.956 DEBUG 25236 --- [main] com.wsq.AsianGamesVolunteerApplication   : Running with Spring Boot v2.5.1, Spring v5.3.8
-2021-07-01 11:13:55.956  INFO 25236 --- [main] com.wsq.AsianGamesVolunteerApplication   : No active profile set, falling back to default profiles: default
-2021-07-01 11:13:57.218  INFO 25236 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-07-01 11:13:57.221  INFO 25236 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-07-01 11:13:57.270  INFO 25236 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 0 Redis repository interfaces.
-2021-07-01 11:13:57.756  INFO 25236 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.wsq.code.config.RedisConfig$$EnhancerBySpringCGLIB$$6012cf8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-07-01 11:13:58.045  INFO 25236 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2021-07-01 11:13:58.054  INFO 25236 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-01 11:13:58.054  INFO 25236 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
-2021-07-01 11:13:58.056  INFO 25236 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
-2021-07-01 11:13:58.056  INFO 25236 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-2021-07-01 11:13:58.056  INFO 25236 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2021-07-01 11:13:58.061  INFO 25236 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
-2021-07-01 11:13:58.221  INFO 25236 --- [main] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring embedded WebApplicationContext
-2021-07-01 11:13:58.222  INFO 25236 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2207 ms
-2021-07-01 11:14:02.164  INFO 25236 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-07-01 11:14:02.460  INFO 25236 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/volunteer'
-2021-07-01 11:14:02.807  INFO 25236 --- [main] com.wsq.AsianGamesVolunteerApplication   : Started AsianGamesVolunteerApplication in 7.362 seconds (JVM running for 9.382)
-2021-07-01 11:14:07.202  INFO 25236 --- [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-07-01 11:14:07.202  INFO 25236 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-07-01 11:14:07.205  INFO 25236 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2021-07-01 16:10:20.032  INFO 13704 --- [main] com.wsq.AsianGamesVolunteerApplication   : Starting AsianGamesVolunteerApplication using Java 1.8.0_131 on DESKTOP-66NJ4C7 with PID 13704 (D:\INetItems\asian-games-volunteer\target\classes started by 晴 in D:\INetItems\asian-games-volunteer)
-2021-07-01 16:10:20.036 DEBUG 13704 --- [main] com.wsq.AsianGamesVolunteerApplication   : Running with Spring Boot v2.5.1, Spring v5.3.8
-2021-07-01 16:10:20.036  INFO 13704 --- [main] com.wsq.AsianGamesVolunteerApplication   : No active profile set, falling back to default profiles: default
-2021-07-01 16:10:21.317  INFO 13704 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-07-01 16:10:21.319  INFO 13704 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-07-01 16:10:21.349  INFO 13704 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
-2021-07-01 16:10:21.713  INFO 13704 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.wsq.code.config.RedisConfig$$EnhancerBySpringCGLIB$$424c6486] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-07-01 16:10:22.042  INFO 13704 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2021-07-01 16:10:22.056  INFO 13704 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-01 16:10:22.057  INFO 13704 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
-2021-07-01 16:10:22.059  INFO 13704 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
-2021-07-01 16:10:22.060  INFO 13704 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-2021-07-01 16:10:22.060  INFO 13704 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2021-07-01 16:10:22.066  INFO 13704 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
-2021-07-01 16:10:22.191  INFO 13704 --- [main] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring embedded WebApplicationContext
-2021-07-01 16:10:22.191  INFO 13704 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2088 ms
-2021-07-01 16:10:25.462  INFO 13704 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-07-01 16:10:25.690  INFO 13704 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/volunteer'
-2021-07-01 16:10:25.937  INFO 13704 --- [main] com.wsq.AsianGamesVolunteerApplication   : Started AsianGamesVolunteerApplication in 6.536 seconds (JVM running for 9.137)
-2021-07-01 16:11:30.906  INFO 13704 --- [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-07-01 16:11:30.906  INFO 13704 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-07-01 16:11:30.907  INFO 13704 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-07-03 09:12:47.140  INFO 5980 --- [main] com.wsq.AsianGamesVolunteerApplication   : Starting AsianGamesVolunteerApplication using Java 1.8.0_131 on DESKTOP-66NJ4C7 with PID 5980 (D:\INetItems\asian-games-volunteer\target\classes started by 晴 in D:\INetItems\asian-games-volunteer)
+2021-07-03 09:12:47.153 DEBUG 5980 --- [main] com.wsq.AsianGamesVolunteerApplication   : Running with Spring Boot v2.5.1, Spring v5.3.8
+2021-07-03 09:12:47.154  INFO 5980 --- [main] com.wsq.AsianGamesVolunteerApplication   : No active profile set, falling back to default profiles: default
+2021-07-03 09:12:48.801  INFO 5980 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-07-03 09:12:48.804  INFO 5980 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-07-03 09:12:48.847  INFO 5980 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
+2021-07-03 09:12:49.366  INFO 5980 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.wsq.code.config.RedisConfig$$EnhancerBySpringCGLIB$$2ea87a4a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-07-03 09:12:49.843  INFO 5980 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2021-07-03 09:12:49.862  INFO 5980 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-07-03 09:12:49.862  INFO 5980 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-07-03 09:12:49.864  INFO 5980 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2021-07-03 09:12:49.865  INFO 5980 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-07-03 09:12:49.866  INFO 5980 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-07-03 09:12:49.872  INFO 5980 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2021-07-03 09:12:50.086  INFO 5980 --- [main] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring embedded WebApplicationContext
+2021-07-03 09:12:50.087  INFO 5980 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2842 ms
+2021-07-03 09:12:54.634  INFO 5980 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-07-03 09:12:55.122  INFO 5980 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/volunteer'
+2021-07-03 09:12:55.519  INFO 5980 --- [main] com.wsq.AsianGamesVolunteerApplication   : Started AsianGamesVolunteerApplication in 9.035 seconds (JVM running for 11.428)
+2021-07-03 09:13:14.257  INFO 5980 --- [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-07-03 09:13:14.257  INFO 5980 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-07-03 09:13:14.260  INFO 5980 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-07-03 09:16:29.821 DEBUG 5980 --- [http-nio-8081-exec-5] c.w.c.m.U.selectByStudentIdAndPassword   : ==>  Preparing: SELECT iuser.id AS id, iuser.student_id AS studentId, iuser.`password` AS `password`, iuser.`name` AS `name`, iuser.sex AS sex, iuser.telephone AS telephone, iuser.`language` AS `language`, iuser.job AS job, iuser.age AS age, iuser.role AS role FROM table_user AS iuser WHERE iuser.student_id = ? AND iuser.`password` = ? LIMIT 1;
+2021-07-03 09:16:29.865 DEBUG 5980 --- [http-nio-8081-exec-5] c.w.c.m.U.selectByStudentIdAndPassword   : ==> Parameters: 222(String), bcbe3365e6ac95ea2c0343a2395834dd(String)
+2021-07-03 09:16:29.940 DEBUG 5980 --- [http-nio-8081-exec-5] c.w.c.m.U.selectByStudentIdAndPassword   : <==      Total: 1
+2021-07-03 09:16:57.882 ERROR 5980 --- [http-nio-8081-exec-8] com.wsq.code.config.GlobalException      : java.lang.NullPointerException
+2021-07-03 09:18:10.646 DEBUG 5980 --- [http-nio-8081-exec-10] c.wsq.code.mapper.UserMapper.selectById  : ==>  Preparing: SELECT id,student_id,password,name,sex,telephone,language,job,age,role FROM table_user WHERE id=?
+2021-07-03 09:18:10.647 DEBUG 5980 --- [http-nio-8081-exec-10] c.wsq.code.mapper.UserMapper.selectById  : ==> Parameters: 222(String)
+2021-07-03 09:18:10.652 DEBUG 5980 --- [http-nio-8081-exec-10] c.wsq.code.mapper.UserMapper.selectById  : <==      Total: 1
+2021-07-03 09:18:11.597 DEBUG 5980 --- [http-nio-8081-exec-10] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
+2021-07-03 09:18:11.598 DEBUG 5980 --- [http-nio-8081-exec-10] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 20190000(String)
+2021-07-03 09:18:11.606 DEBUG 5980 --- [http-nio-8081-exec-10] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
+2021-07-03 09:18:11.614  WARN 5980 --- [http-nio-8081-exec-10] c.wsq.code.service.impl.UserServiceImpl  : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3522de97] Transaction not enabled
+2021-07-03 09:18:11.654 DEBUG 5980 --- [http-nio-8081-exec-10] com.wsq.code.mapper.UserMapper.insert    : ==>  Preparing: INSERT INTO table_user ( id, student_id, password, name, telephone, role ) VALUES ( ?, ?, ?, ?, ?, ? )
+2021-07-03 09:18:11.656 DEBUG 5980 --- [http-nio-8081-exec-10] com.wsq.code.mapper.UserMapper.insert    : ==> Parameters: 526159737fc28350e856a14473c324ba(String), 20190000(String), e10adc3949ba59abbe56e057f20f883e(String), 吴诗晴(String), 13723452345(String), user(String)
+2021-07-03 09:24:07.165  INFO 17804 --- [main] com.wsq.AsianGamesVolunteerApplication   : Starting AsianGamesVolunteerApplication using Java 1.8.0_131 on DESKTOP-66NJ4C7 with PID 17804 (D:\INetItems\asian-games-volunteer\target\classes started by 晴 in D:\INetItems\asian-games-volunteer)
+2021-07-03 09:24:07.169 DEBUG 17804 --- [main] com.wsq.AsianGamesVolunteerApplication   : Running with Spring Boot v2.5.1, Spring v5.3.8
+2021-07-03 09:24:07.169  INFO 17804 --- [main] com.wsq.AsianGamesVolunteerApplication   : No active profile set, falling back to default profiles: default
+2021-07-03 09:24:08.381  INFO 17804 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-07-03 09:24:08.383  INFO 17804 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-07-03 09:24:08.417  INFO 17804 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+2021-07-03 09:24:08.786  INFO 17804 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.wsq.code.config.RedisConfig$$EnhancerBySpringCGLIB$$86a344ea] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-07-03 09:24:09.186  INFO 17804 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2021-07-03 09:24:09.203  INFO 17804 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-07-03 09:24:09.203  INFO 17804 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-07-03 09:24:09.205  INFO 17804 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2021-07-03 09:24:09.205  INFO 17804 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-07-03 09:24:09.205  INFO 17804 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-07-03 09:24:09.211  INFO 17804 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2021-07-03 09:24:09.345  INFO 17804 --- [main] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring embedded WebApplicationContext
+2021-07-03 09:24:09.346  INFO 17804 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2118 ms
+2021-07-03 09:24:12.877  INFO 17804 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-07-03 09:24:13.220  INFO 17804 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/volunteer'
+2021-07-03 09:24:13.696  INFO 17804 --- [main] com.wsq.AsianGamesVolunteerApplication   : Started AsianGamesVolunteerApplication in 7.049 seconds (JVM running for 9.045)
+2021-07-03 09:24:19.941  INFO 17804 --- [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-07-03 09:24:19.941  INFO 17804 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-07-03 09:24:19.944  INFO 17804 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2021-07-03 09:25:05.909 DEBUG 17804 --- [http-nio-8081-exec-7] c.wsq.code.mapper.UserMapper.deleteById  : ==>  Preparing: DELETE FROM table_user WHERE id=?
+2021-07-03 09:25:05.947 DEBUG 17804 --- [http-nio-8081-exec-7] c.wsq.code.mapper.UserMapper.deleteById  : ==> Parameters: 20190000(String)
+2021-07-03 09:25:05.949 DEBUG 17804 --- [http-nio-8081-exec-7] c.wsq.code.mapper.UserMapper.deleteById  : <==    Updates: 0
+2021-07-03 10:24:25.106  INFO 26668 --- [main] com.wsq.AsianGamesVolunteerApplication   : Starting AsianGamesVolunteerApplication using Java 1.8.0_131 on DESKTOP-66NJ4C7 with PID 26668 (D:\INetItems\asian-games-volunteer\target\classes started by 晴 in D:\INetItems\asian-games-volunteer)
+2021-07-03 10:24:25.110 DEBUG 26668 --- [main] com.wsq.AsianGamesVolunteerApplication   : Running with Spring Boot v2.5.1, Spring v5.3.8
+2021-07-03 10:24:25.111  INFO 26668 --- [main] com.wsq.AsianGamesVolunteerApplication   : No active profile set, falling back to default profiles: default
+2021-07-03 10:24:26.706  INFO 26668 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-07-03 10:24:26.709  INFO 26668 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-07-03 10:24:26.740  INFO 26668 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+2021-07-03 10:24:27.181  INFO 26668 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.wsq.code.config.RedisConfig$$EnhancerBySpringCGLIB$$f0e2231d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-07-03 10:24:27.512  INFO 26668 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2021-07-03 10:24:27.523  INFO 26668 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-07-03 10:24:27.524  INFO 26668 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-07-03 10:24:27.526  INFO 26668 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2021-07-03 10:24:27.527  INFO 26668 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-07-03 10:24:27.527  INFO 26668 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-07-03 10:24:27.552  INFO 26668 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2021-07-03 10:24:27.738  INFO 26668 --- [main] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring embedded WebApplicationContext
+2021-07-03 10:24:27.739  INFO 26668 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2552 ms
+2021-07-03 10:24:33.178  INFO 26668 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-07-03 10:24:33.530  INFO 26668 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/volunteer'
+2021-07-03 10:24:33.995  INFO 26668 --- [main] com.wsq.AsianGamesVolunteerApplication   : Started AsianGamesVolunteerApplication in 9.687 seconds (JVM running for 14.769)
+2021-07-03 10:25:34.935  INFO 26668 --- [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-07-03 10:25:34.935  INFO 26668 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-07-03 10:25:34.936  INFO 26668 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-07-03 10:25:35.074 DEBUG 26668 --- [http-nio-8081-exec-1] c.wsq.code.mapper.UserMapper.deleteById  : ==>  Preparing: DELETE FROM table_user WHERE id=?
+2021-07-03 10:25:35.121 DEBUG 26668 --- [http-nio-8081-exec-1] c.wsq.code.mapper.UserMapper.deleteById  : ==> Parameters: 526159737fc28350e856a14473c324ba(String)
+2021-07-03 10:25:35.130 DEBUG 26668 --- [http-nio-8081-exec-1] c.wsq.code.mapper.UserMapper.deleteById  : <==    Updates: 1
+2021-07-03 10:25:45.685 DEBUG 26668 --- [http-nio-8081-exec-2] c.wsq.code.mapper.UserMapper.deleteById  : ==>  Preparing: DELETE FROM table_user WHERE id=?
+2021-07-03 10:25:45.685 DEBUG 26668 --- [http-nio-8081-exec-2] c.wsq.code.mapper.UserMapper.deleteById  : ==> Parameters: 526159737fc28350e856a14473c324ba(String)
+2021-07-03 10:25:45.687 DEBUG 26668 --- [http-nio-8081-exec-2] c.wsq.code.mapper.UserMapper.deleteById  : <==    Updates: 0
+2021-07-03 10:26:35.875  INFO 5768 --- [main] com.wsq.AsianGamesVolunteerApplication   : Starting AsianGamesVolunteerApplication using Java 1.8.0_131 on DESKTOP-66NJ4C7 with PID 5768 (D:\INetItems\asian-games-volunteer\target\classes started by 晴 in D:\INetItems\asian-games-volunteer)
+2021-07-03 10:26:35.879 DEBUG 5768 --- [main] com.wsq.AsianGamesVolunteerApplication   : Running with Spring Boot v2.5.1, Spring v5.3.8
+2021-07-03 10:26:35.879  INFO 5768 --- [main] com.wsq.AsianGamesVolunteerApplication   : No active profile set, falling back to default profiles: default
+2021-07-03 10:26:37.519  INFO 5768 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-07-03 10:26:37.522  INFO 5768 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-07-03 10:26:37.559  INFO 5768 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+2021-07-03 10:26:38.110  INFO 5768 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.wsq.code.config.RedisConfig$$EnhancerBySpringCGLIB$$285febc1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-07-03 10:26:38.544  INFO 5768 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2021-07-03 10:26:38.556  INFO 5768 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-07-03 10:26:38.557  INFO 5768 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-07-03 10:26:38.562  INFO 5768 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2021-07-03 10:26:38.564  INFO 5768 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-07-03 10:26:38.564  INFO 5768 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-07-03 10:26:38.619  INFO 5768 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2021-07-03 10:26:38.821  INFO 5768 --- [main] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring embedded WebApplicationContext
+2021-07-03 10:26:38.821  INFO 5768 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2865 ms
+2021-07-03 10:26:43.468  INFO 5768 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-07-03 10:26:43.850  INFO 5768 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/volunteer'
+2021-07-03 10:26:44.264  INFO 5768 --- [main] com.wsq.AsianGamesVolunteerApplication   : Started AsianGamesVolunteerApplication in 9.111 seconds (JVM running for 11.645)
+2021-07-03 10:27:11.494  INFO 5768 --- [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-07-03 10:27:11.494  INFO 5768 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-07-03 10:27:11.500  INFO 5768 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2021-07-03 10:27:15.420 DEBUG 5768 --- [http-nio-8081-exec-1] c.wsq.code.mapper.UserMapper.selectById  : ==>  Preparing: SELECT id,student_id,password,name,sex,telephone,language,job,age,role FROM table_user WHERE id=?
+2021-07-03 10:27:15.458 DEBUG 5768 --- [http-nio-8081-exec-1] c.wsq.code.mapper.UserMapper.selectById  : ==> Parameters: 222(String)
+2021-07-03 10:27:15.493 DEBUG 5768 --- [http-nio-8081-exec-1] c.wsq.code.mapper.UserMapper.selectById  : <==      Total: 1
+2021-07-03 10:27:15.534 DEBUG 5768 --- [http-nio-8081-exec-1] c.wsq.code.mapper.UserMapper.deleteById  : ==>  Preparing: DELETE FROM table_user WHERE id=?
+2021-07-03 10:27:15.535 DEBUG 5768 --- [http-nio-8081-exec-1] c.wsq.code.mapper.UserMapper.deleteById  : ==> Parameters: 526159737fc28350e856a14473c324ba(String)
+2021-07-03 10:27:15.536 DEBUG 5768 --- [http-nio-8081-exec-1] c.wsq.code.mapper.UserMapper.deleteById  : <==    Updates: 0
+2021-07-03 10:27:25.701 ERROR 5768 --- [http-nio-8081-exec-3] com.wsq.code.config.GlobalException      : cn.dev33.satoken.exception.NotLoginException: token无效
+2021-07-03 11:21:14.501  INFO 23952 --- [main] com.wsq.AsianGamesVolunteerApplication   : Starting AsianGamesVolunteerApplication using Java 1.8.0_131 on DESKTOP-66NJ4C7 with PID 23952 (D:\INetItems\asian-games-volunteer\target\classes started by 晴 in D:\INetItems\asian-games-volunteer)
+2021-07-03 11:21:14.504 DEBUG 23952 --- [main] com.wsq.AsianGamesVolunteerApplication   : Running with Spring Boot v2.5.1, Spring v5.3.8
+2021-07-03 11:21:14.505  INFO 23952 --- [main] com.wsq.AsianGamesVolunteerApplication   : No active profile set, falling back to default profiles: default
+2021-07-03 11:21:15.733  INFO 23952 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-07-03 11:21:15.736  INFO 23952 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-07-03 11:21:15.769  INFO 23952 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+2021-07-03 11:21:16.144  INFO 23952 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.wsq.code.config.RedisConfig$$EnhancerBySpringCGLIB$$86a344ea] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-07-03 11:21:16.569  INFO 23952 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2021-07-03 11:21:16.578  INFO 23952 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-07-03 11:21:16.579  INFO 23952 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-07-03 11:21:16.580  INFO 23952 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2021-07-03 11:21:16.581  INFO 23952 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-07-03 11:21:16.581  INFO 23952 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-07-03 11:21:16.643  INFO 23952 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2021-07-03 11:21:16.845  INFO 23952 --- [main] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring embedded WebApplicationContext
+2021-07-03 11:21:16.846  INFO 23952 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2279 ms
+2021-07-03 11:21:20.594  INFO 23952 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-07-03 11:21:20.919  INFO 23952 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/volunteer'
+2021-07-03 11:21:21.267  INFO 23952 --- [main] com.wsq.AsianGamesVolunteerApplication   : Started AsianGamesVolunteerApplication in 7.273 seconds (JVM running for 9.291)
+2021-07-03 11:21:38.827  INFO 23952 --- [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-07-03 11:21:38.828  INFO 23952 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-07-03 11:21:38.830  INFO 23952 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-07-03 11:23:14.942 DEBUG 23952 --- [http-nio-8081-exec-10] c.wsq.code.mapper.JobMapper.selectById   : ==>  Preparing: SELECT id,job_name FROM table_job WHERE id=?
+2021-07-03 11:23:14.985 DEBUG 23952 --- [http-nio-8081-exec-10] c.wsq.code.mapper.JobMapper.selectById   : ==> Parameters: string(String)
+2021-07-03 11:23:15.018 DEBUG 23952 --- [http-nio-8081-exec-10] c.wsq.code.mapper.JobMapper.selectById   : <==      Total: 0
+2021-07-03 11:23:25.286 DEBUG 23952 --- [http-nio-8081-exec-1] c.wsq.code.mapper.JobMapper.selectById   : ==>  Preparing: SELECT id,job_name FROM table_job WHERE id=?
+2021-07-03 11:23:25.287 DEBUG 23952 --- [http-nio-8081-exec-1] c.wsq.code.mapper.JobMapper.selectById   : ==> Parameters: 3(String)
+2021-07-03 11:23:25.346 DEBUG 23952 --- [http-nio-8081-exec-1] c.wsq.code.mapper.JobMapper.selectById   : <==      Total: 1
+2021-07-03 11:23:35.721 DEBUG 23952 --- [http-nio-8081-exec-3] c.wsq.code.mapper.JobMapper.selectById   : ==>  Preparing: SELECT id,job_name FROM table_job WHERE id=?
+2021-07-03 11:23:35.721 DEBUG 23952 --- [http-nio-8081-exec-3] c.wsq.code.mapper.JobMapper.selectById   : ==> Parameters: 3(String)
+2021-07-03 11:23:35.722 DEBUG 23952 --- [http-nio-8081-exec-3] c.wsq.code.mapper.JobMapper.selectById   : <==      Total: 1
+2021-07-03 11:23:35.803 DEBUG 23952 --- [http-nio-8081-exec-3] c.wsq.code.mapper.UserMapper.updateById  : ==>  Preparing: UPDATE table_user SET password=?, sex=?, telephone=?, language=?, job=?, age=? WHERE id=?
+2021-07-03 11:23:35.813 DEBUG 23952 --- [http-nio-8081-exec-3] c.wsq.code.mapper.UserMapper.updateById  : ==> Parameters: e10adc3949ba59abbe56e057f20f883e(String), 男(String), 13323452345(String), string(String), 3(String), 25(Integer), string(String)
+2021-07-03 11:23:35.865 DEBUG 23952 --- [http-nio-8081-exec-3] c.wsq.code.mapper.UserMapper.updateById  : <==    Updates: 0
