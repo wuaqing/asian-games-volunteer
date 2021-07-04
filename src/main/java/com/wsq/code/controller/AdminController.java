@@ -40,6 +40,26 @@ public class AdminController {
 
     /**
      *
+     * @description: 管理员根据志愿者岗位查找用户并分页
+     * @author wsq
+     * @since 2021/7/3 13:36
+     * @param token:
+     * @param jobId: 志愿者岗位
+     * @param current: 第几页
+     * @param size: 一页几条
+     * @return com.xiaoTools.core.result.Result
+    */
+    @SaCheckRole("admin")
+    @GetMapping("selectUserByJob")
+    public Result selectUserByJob(@RequestHeader(value = "satoken")String token,
+                                   @RequestParam String jobId,
+                                   @RequestParam Integer current,
+                                   @RequestParam Integer size){
+        return userService.adminSelectUserByJob(current,size, jobId,"/admin/selectUserByJob");
+    }
+
+    /**
+     *
      * @description: 管理员根据姓名查找用户并分页
      * @author wsq
      * @since 2021/7/3 13:36

@@ -133,9 +133,24 @@ public interface UserService extends IService<User> {
      * @description: 管理员根据姓名查找用户并分页
      * @author wsq
      * @since 2021/7/3 13:37
+     * @param current: 第几页
+     * @param size: 一页几条
      * @param name: 姓名
      * @param path:
      * @return com.xiaoTools.core.result.Result
     */
     Result adminSelectUserByName(Integer current,Integer size,String name, String path);
+
+    /**
+     *
+     * @description: 管理员根据志愿者岗位查找用户并分页
+     * @author wsq
+     * @since 2021/7/4 9:16
+     * @param current: 第几页
+     * @param size: 一页几条
+     * @param jobId: 志愿者岗位
+     * @param path:
+     * @return com.xiaoTools.core.result.Result
+    */
+    Result adminSelectUserByJob(Integer current, Integer size, String jobId, String path);
 }

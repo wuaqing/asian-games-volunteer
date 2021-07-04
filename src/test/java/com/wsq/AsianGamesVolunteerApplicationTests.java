@@ -2,8 +2,11 @@ package com.wsq;
 
 import cn.afterturn.easypoi.excel.ExcelImportUtil;
 import cn.afterturn.easypoi.excel.entity.ImportParams;
+import com.wsq.code.entity.Job;
 import com.wsq.code.entity.user.ExcelUser;
 import com.wsq.code.mapper.UserMapper;
+import com.wsq.code.service.JobService;
+import com.wsq.code.service.impl.JobServiceImpl;
 import com.wsq.code.util.FileUtil;
 import com.xiaoTools.core.regular.validation.Validation;
 import com.xiaoTools.core.result.Result;
@@ -21,6 +24,9 @@ class AsianGamesVolunteerApplicationTests {
 
     @Resource
     private UserMapper userMapper;
+
+    @Resource
+    private JobService jobService;
 
     @Resource
     private RedisTemplate<String , Object> redisTemplate;
@@ -94,6 +100,29 @@ class AsianGamesVolunteerApplicationTests {
         System.out.println(userMapper.selectByStudentIdCount("111"));
 
         System.out.println(Validation.isMobile("123123"));
+
+    }
+
+    @Test
+    void contextLoads_8() {
+        Job job = new Job();
+        job.setJobName("后勤保障服务");
+        jobService.save(job);
+        Job job1 = new Job();
+        job1.setJobName("交通出行服务");
+        jobService.save(job1);
+        Job job2 = new Job();
+        job2.setJobName("官方会议服务");
+        jobService.save(job2);
+        Job job3 = new Job();
+        job3.setJobName("亚运村及官方接待饭店服务");
+        jobService.save(job3);
+        Job job4 = new Job();
+        job4.setJobName("信息服务");
+        jobService.save(job4);
+        Job job5 = new Job();
+        job5.setJobName("其他赛会保障需要的志愿服务");
+        jobService.save(job5);
 
     }
 }

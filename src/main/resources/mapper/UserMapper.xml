@@ -57,4 +57,9 @@
     <select id="selectAllUser" resultType="com.wsq.code.entity.User">
         SELECT * FROM table_user AS users
     </select>
+
+    <!-- 管理员根据志愿者岗位查找用户并分页 -->
+    <select id="selectUserByJob" resultType="com.wsq.code.entity.User">
+        SELECT * FROM table_user AS users WHERE users.job = #{jobId}
+    </select>
 </mapper>

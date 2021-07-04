@@ -67,4 +67,15 @@ public interface UserMapper extends BaseMapper<User> {
      * @return com.baomidou.mybatisplus.core.metadata.IPage<com.wsq.code.entity.User>
     */
     IPage<User> selectAllUser(Page<User> page);
+
+    /**
+     *
+     * @description: 管理员根据志愿者岗位查找用户并分页
+     * @author wsq
+     * @since 2021/7/4 9:44
+     * @param page:
+     * @param jobId: 志愿者岗位
+     * @return com.baomidou.mybatisplus.core.metadata.IPage<com.wsq.code.entity.User>
+    */
+    IPage<User> selectUserByJob(Page<User> page, String jobId);
 }
