@@ -8,15 +8,12 @@ import com.wsq.code.entity.user.AdminUserUpdate;
 import com.wsq.code.entity.user.UserLogin;
 import com.wsq.code.service.UserService;
 import com.xiaoTools.core.result.Result;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
-import java.io.*;
-import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -43,6 +40,26 @@ public class AdminController {
 
     /**
      *
+     * @description: 管理员根据姓名查找用户并分页
+     * @author wsq
+     * @since 2021/7/3 13:36
+     * @param token:
+     * @param name: 姓名
+     * @param current: 第几页
+     * @param size: 一页几条
+     * @return com.xiaoTools.core.result.Result
+    */
+    @SaCheckRole("admin")
+    @GetMapping("selectUserByName")
+    public Result selectUserByName(@RequestHeader(value = "satoken")String token,
+                                   @RequestParam String name,
+                                   @RequestParam Integer current,
+                                   @RequestParam Integer size){
+        return userService.adminSelectUserByName(current,size, name,"/admin/selectUserByName");
+    }
+
+    /**
+     *
      * @description: 管理员修改用户信息
      * @author wsq
      * @since 2021/7/3 11:02
@@ -50,6 +67,7 @@ public class AdminController {
      * @param userUpdate: 管理员修改用户信息实体类
      * @return com.xiaoTools.core.result.Result
     */
+    @SaCheckRole("admin")
     @PostMapping("/updateUser")
     public Result updateUser(@RequestHeader(value = "satoken")String token, @RequestBody AdminUserUpdate userUpdate){
         return userService.adminUpdateUser(userUpdate,"/admin/updateUser");
@@ -100,16 +118,19 @@ public class AdminController {
 
     /**
      *
-     * @description: 管理员查看所有用户
+     * @description: 管理员查看所有用户并分页
      * @author wsq
      * @since 2021/6/28 11:33
-
+     * @param token:
+     * @param current: 第几页
+     * @param size: 一页几条
      * @return com.xiaoTools.core.result.Result
     */
     @SaCheckRole("admin")
     @GetMapping("/selectAllUser")
-    public Result selectAllUser(@RequestHeader(value = "satoken")String token){
-        return userService.selectAllUser("/admin/selectAllUser");
+    public Result selectAllUser(@RequestHeader(value = "satoken")String token,
+                                @RequestParam Integer current, @RequestParam Integer size){
+        return userService.selectAllUser(current,size, "/admin/selectAllUser");
     }
 
     /**

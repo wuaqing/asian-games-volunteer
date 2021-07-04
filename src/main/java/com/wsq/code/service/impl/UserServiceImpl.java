@@ -2,6 +2,8 @@ package com.wsq.code.service.impl;
 
 import cn.afterturn.easypoi.excel.ExcelImportUtil;
 import cn.afterturn.easypoi.excel.entity.ImportParams;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.wsq.code.entity.Job;
 import com.wsq.code.entity.User;
 import com.wsq.code.entity.user.*;
@@ -232,18 +234,19 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
 
     /**
      *
-     * @description: 管理员查看所有用户
+     * @description: 管理员查看所有用户并分页
      * @author wsq
      * @since 2021/6/28 11:36
+     * @param current: 第几页
+     * @param size: 一页几条
      * @param path:
      * @return com.xiaoTools.core.result.Result
     */
     @Override
-    public Result selectAllUser(String path) {
+    public Result selectAllUser(Integer current, Integer size, String path) {
         //查询所有用户信息
-        List<User> list = this.list();
-        //查询成功
-        return new Result().result200(list,path);
+        IPage<User> userIPage = userMapper.selectAllUser(new Page<>(current, size));
+        return new Result().result200(userIPage,path);
     }
 
     /**
@@ -426,6 +429,21 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         }
         //修改失败
         return new Result().result403("修改失败",path);
+    }
+
+    /**
+     *
+     * @description: 管理员根据姓名查找用户并分页
+     * @author wsq
+     * @since 2021/7/3 13:38
+     * @param name: 姓名
+     * @param path:
+     * @return com.xiaoTools.core.result.Result
+    */
+    @Override
+    public Result adminSelectUserByName(Integer current,Integer size,String name, String path) {
+        IPage<User> userIPage = userMapper.selectUserByName(new Page<>(current, size), "%" + name + "%");
+        return new Result().result200(userIPage,path);
     }
 
 }

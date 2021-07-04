@@ -75,13 +75,15 @@ public interface UserService extends IService<User> {
 
     /**
      *
-     * @description: 管理员查看所有用户
+     * @description: 管理员查看所有用户并分页
      * @author wsq
      * @since 2021/6/28 11:32
+     * @param current: 第几页
+     * @param size: 一页几条
      * @param path:
      * @return com.xiaoTools.core.result.Result
     */
-    Result selectAllUser(String path);
+    Result selectAllUser(Integer current, Integer size, String path);
 
     /**
      *
@@ -125,4 +127,15 @@ public interface UserService extends IService<User> {
      * @return com.xiaoTools.core.result.Result
     */
     Result adminUpdateUser(AdminUserUpdate userUpdate, String path);
+
+    /**
+     *
+     * @description: 管理员根据姓名查找用户并分页
+     * @author wsq
+     * @since 2021/7/3 13:37
+     * @param name: 姓名
+     * @param path:
+     * @return com.xiaoTools.core.result.Result
+    */
+    Result adminSelectUserByName(Integer current,Integer size,String name, String path);
 }

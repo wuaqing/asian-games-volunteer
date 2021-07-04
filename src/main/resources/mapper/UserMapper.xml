@@ -43,7 +43,18 @@
         LIMIT 1;
     </select>
 
+    <!-- 通过学号获取个数 -->
     <select id="selectByStudentIdCount" resultType="java.lang.Integer">
         SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = #{studentId};
+    </select>
+
+    <!-- 管理员根据姓名查找用户并分页 -->
+    <select id="selectUserByName" resultType="com.wsq.code.entity.User">
+        SELECT * FROM table_user AS users WHERE users.name LIKE #{name}
+    </select>
+
+    <!-- 查看所有用户并分页 -->
+    <select id="selectAllUser" resultType="com.wsq.code.entity.User">
+        SELECT * FROM table_user AS users
     </select>
 </mapper>

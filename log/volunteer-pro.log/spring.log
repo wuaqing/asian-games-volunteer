@@ -1,151 +1,99 @@
-2021-07-03 09:12:47.140  INFO 5980 --- [main] com.wsq.AsianGamesVolunteerApplication   : Starting AsianGamesVolunteerApplication using Java 1.8.0_131 on DESKTOP-66NJ4C7 with PID 5980 (D:\INetItems\asian-games-volunteer\target\classes started by 晴 in D:\INetItems\asian-games-volunteer)
-2021-07-03 09:12:47.153 DEBUG 5980 --- [main] com.wsq.AsianGamesVolunteerApplication   : Running with Spring Boot v2.5.1, Spring v5.3.8
-2021-07-03 09:12:47.154  INFO 5980 --- [main] com.wsq.AsianGamesVolunteerApplication   : No active profile set, falling back to default profiles: default
-2021-07-03 09:12:48.801  INFO 5980 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-07-03 09:12:48.804  INFO 5980 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-07-03 09:12:48.847  INFO 5980 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
-2021-07-03 09:12:49.366  INFO 5980 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.wsq.code.config.RedisConfig$$EnhancerBySpringCGLIB$$2ea87a4a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-07-03 09:12:49.843  INFO 5980 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2021-07-03 09:12:49.862  INFO 5980 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-03 09:12:49.862  INFO 5980 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
-2021-07-03 09:12:49.864  INFO 5980 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
-2021-07-03 09:12:49.865  INFO 5980 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-2021-07-03 09:12:49.866  INFO 5980 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2021-07-03 09:12:49.872  INFO 5980 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
-2021-07-03 09:12:50.086  INFO 5980 --- [main] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring embedded WebApplicationContext
-2021-07-03 09:12:50.087  INFO 5980 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2842 ms
-2021-07-03 09:12:54.634  INFO 5980 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-07-03 09:12:55.122  INFO 5980 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/volunteer'
-2021-07-03 09:12:55.519  INFO 5980 --- [main] com.wsq.AsianGamesVolunteerApplication   : Started AsianGamesVolunteerApplication in 9.035 seconds (JVM running for 11.428)
-2021-07-03 09:13:14.257  INFO 5980 --- [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-07-03 09:13:14.257  INFO 5980 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-07-03 09:13:14.260  INFO 5980 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2021-07-03 09:16:29.821 DEBUG 5980 --- [http-nio-8081-exec-5] c.w.c.m.U.selectByStudentIdAndPassword   : ==>  Preparing: SELECT iuser.id AS id, iuser.student_id AS studentId, iuser.`password` AS `password`, iuser.`name` AS `name`, iuser.sex AS sex, iuser.telephone AS telephone, iuser.`language` AS `language`, iuser.job AS job, iuser.age AS age, iuser.role AS role FROM table_user AS iuser WHERE iuser.student_id = ? AND iuser.`password` = ? LIMIT 1;
-2021-07-03 09:16:29.865 DEBUG 5980 --- [http-nio-8081-exec-5] c.w.c.m.U.selectByStudentIdAndPassword   : ==> Parameters: 222(String), bcbe3365e6ac95ea2c0343a2395834dd(String)
-2021-07-03 09:16:29.940 DEBUG 5980 --- [http-nio-8081-exec-5] c.w.c.m.U.selectByStudentIdAndPassword   : <==      Total: 1
-2021-07-03 09:16:57.882 ERROR 5980 --- [http-nio-8081-exec-8] com.wsq.code.config.GlobalException      : java.lang.NullPointerException
-2021-07-03 09:18:10.646 DEBUG 5980 --- [http-nio-8081-exec-10] c.wsq.code.mapper.UserMapper.selectById  : ==>  Preparing: SELECT id,student_id,password,name,sex,telephone,language,job,age,role FROM table_user WHERE id=?
-2021-07-03 09:18:10.647 DEBUG 5980 --- [http-nio-8081-exec-10] c.wsq.code.mapper.UserMapper.selectById  : ==> Parameters: 222(String)
-2021-07-03 09:18:10.652 DEBUG 5980 --- [http-nio-8081-exec-10] c.wsq.code.mapper.UserMapper.selectById  : <==      Total: 1
-2021-07-03 09:18:11.597 DEBUG 5980 --- [http-nio-8081-exec-10] c.w.c.m.U.selectByStudentIdCount         : ==>  Preparing: SELECT COUNT(*) FROM table_user AS users WHERE users.student_id = ?;
-2021-07-03 09:18:11.598 DEBUG 5980 --- [http-nio-8081-exec-10] c.w.c.m.U.selectByStudentIdCount         : ==> Parameters: 20190000(String)
-2021-07-03 09:18:11.606 DEBUG 5980 --- [http-nio-8081-exec-10] c.w.c.m.U.selectByStudentIdCount         : <==      Total: 1
-2021-07-03 09:18:11.614  WARN 5980 --- [http-nio-8081-exec-10] c.wsq.code.service.impl.UserServiceImpl  : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3522de97] Transaction not enabled
-2021-07-03 09:18:11.654 DEBUG 5980 --- [http-nio-8081-exec-10] com.wsq.code.mapper.UserMapper.insert    : ==>  Preparing: INSERT INTO table_user ( id, student_id, password, name, telephone, role ) VALUES ( ?, ?, ?, ?, ?, ? )
-2021-07-03 09:18:11.656 DEBUG 5980 --- [http-nio-8081-exec-10] com.wsq.code.mapper.UserMapper.insert    : ==> Parameters: 526159737fc28350e856a14473c324ba(String), 20190000(String), e10adc3949ba59abbe56e057f20f883e(String), 吴诗晴(String), 13723452345(String), user(String)
-2021-07-03 09:24:07.165  INFO 17804 --- [main] com.wsq.AsianGamesVolunteerApplication   : Starting AsianGamesVolunteerApplication using Java 1.8.0_131 on DESKTOP-66NJ4C7 with PID 17804 (D:\INetItems\asian-games-volunteer\target\classes started by 晴 in D:\INetItems\asian-games-volunteer)
-2021-07-03 09:24:07.169 DEBUG 17804 --- [main] com.wsq.AsianGamesVolunteerApplication   : Running with Spring Boot v2.5.1, Spring v5.3.8
-2021-07-03 09:24:07.169  INFO 17804 --- [main] com.wsq.AsianGamesVolunteerApplication   : No active profile set, falling back to default profiles: default
-2021-07-03 09:24:08.381  INFO 17804 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-07-03 09:24:08.383  INFO 17804 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-07-03 09:24:08.417  INFO 17804 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
-2021-07-03 09:24:08.786  INFO 17804 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.wsq.code.config.RedisConfig$$EnhancerBySpringCGLIB$$86a344ea] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-07-03 09:24:09.186  INFO 17804 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2021-07-03 09:24:09.203  INFO 17804 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-03 09:24:09.203  INFO 17804 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
-2021-07-03 09:24:09.205  INFO 17804 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
-2021-07-03 09:24:09.205  INFO 17804 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-2021-07-03 09:24:09.205  INFO 17804 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2021-07-03 09:24:09.211  INFO 17804 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
-2021-07-03 09:24:09.345  INFO 17804 --- [main] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring embedded WebApplicationContext
-2021-07-03 09:24:09.346  INFO 17804 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2118 ms
-2021-07-03 09:24:12.877  INFO 17804 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-07-03 09:24:13.220  INFO 17804 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/volunteer'
-2021-07-03 09:24:13.696  INFO 17804 --- [main] com.wsq.AsianGamesVolunteerApplication   : Started AsianGamesVolunteerApplication in 7.049 seconds (JVM running for 9.045)
-2021-07-03 09:24:19.941  INFO 17804 --- [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-07-03 09:24:19.941  INFO 17804 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-07-03 09:24:19.944  INFO 17804 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2021-07-03 09:25:05.909 DEBUG 17804 --- [http-nio-8081-exec-7] c.wsq.code.mapper.UserMapper.deleteById  : ==>  Preparing: DELETE FROM table_user WHERE id=?
-2021-07-03 09:25:05.947 DEBUG 17804 --- [http-nio-8081-exec-7] c.wsq.code.mapper.UserMapper.deleteById  : ==> Parameters: 20190000(String)
-2021-07-03 09:25:05.949 DEBUG 17804 --- [http-nio-8081-exec-7] c.wsq.code.mapper.UserMapper.deleteById  : <==    Updates: 0
-2021-07-03 10:24:25.106  INFO 26668 --- [main] com.wsq.AsianGamesVolunteerApplication   : Starting AsianGamesVolunteerApplication using Java 1.8.0_131 on DESKTOP-66NJ4C7 with PID 26668 (D:\INetItems\asian-games-volunteer\target\classes started by 晴 in D:\INetItems\asian-games-volunteer)
-2021-07-03 10:24:25.110 DEBUG 26668 --- [main] com.wsq.AsianGamesVolunteerApplication   : Running with Spring Boot v2.5.1, Spring v5.3.8
-2021-07-03 10:24:25.111  INFO 26668 --- [main] com.wsq.AsianGamesVolunteerApplication   : No active profile set, falling back to default profiles: default
-2021-07-03 10:24:26.706  INFO 26668 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-07-03 10:24:26.709  INFO 26668 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-07-03 10:24:26.740  INFO 26668 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
-2021-07-03 10:24:27.181  INFO 26668 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.wsq.code.config.RedisConfig$$EnhancerBySpringCGLIB$$f0e2231d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-07-03 10:24:27.512  INFO 26668 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2021-07-03 10:24:27.523  INFO 26668 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-03 10:24:27.524  INFO 26668 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
-2021-07-03 10:24:27.526  INFO 26668 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
-2021-07-03 10:24:27.527  INFO 26668 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-2021-07-03 10:24:27.527  INFO 26668 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2021-07-03 10:24:27.552  INFO 26668 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
-2021-07-03 10:24:27.738  INFO 26668 --- [main] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring embedded WebApplicationContext
-2021-07-03 10:24:27.739  INFO 26668 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2552 ms
-2021-07-03 10:24:33.178  INFO 26668 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-07-03 10:24:33.530  INFO 26668 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/volunteer'
-2021-07-03 10:24:33.995  INFO 26668 --- [main] com.wsq.AsianGamesVolunteerApplication   : Started AsianGamesVolunteerApplication in 9.687 seconds (JVM running for 14.769)
-2021-07-03 10:25:34.935  INFO 26668 --- [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-07-03 10:25:34.935  INFO 26668 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-07-03 10:25:34.936  INFO 26668 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-07-03 10:25:35.074 DEBUG 26668 --- [http-nio-8081-exec-1] c.wsq.code.mapper.UserMapper.deleteById  : ==>  Preparing: DELETE FROM table_user WHERE id=?
-2021-07-03 10:25:35.121 DEBUG 26668 --- [http-nio-8081-exec-1] c.wsq.code.mapper.UserMapper.deleteById  : ==> Parameters: 526159737fc28350e856a14473c324ba(String)
-2021-07-03 10:25:35.130 DEBUG 26668 --- [http-nio-8081-exec-1] c.wsq.code.mapper.UserMapper.deleteById  : <==    Updates: 1
-2021-07-03 10:25:45.685 DEBUG 26668 --- [http-nio-8081-exec-2] c.wsq.code.mapper.UserMapper.deleteById  : ==>  Preparing: DELETE FROM table_user WHERE id=?
-2021-07-03 10:25:45.685 DEBUG 26668 --- [http-nio-8081-exec-2] c.wsq.code.mapper.UserMapper.deleteById  : ==> Parameters: 526159737fc28350e856a14473c324ba(String)
-2021-07-03 10:25:45.687 DEBUG 26668 --- [http-nio-8081-exec-2] c.wsq.code.mapper.UserMapper.deleteById  : <==    Updates: 0
-2021-07-03 10:26:35.875  INFO 5768 --- [main] com.wsq.AsianGamesVolunteerApplication   : Starting AsianGamesVolunteerApplication using Java 1.8.0_131 on DESKTOP-66NJ4C7 with PID 5768 (D:\INetItems\asian-games-volunteer\target\classes started by 晴 in D:\INetItems\asian-games-volunteer)
-2021-07-03 10:26:35.879 DEBUG 5768 --- [main] com.wsq.AsianGamesVolunteerApplication   : Running with Spring Boot v2.5.1, Spring v5.3.8
-2021-07-03 10:26:35.879  INFO 5768 --- [main] com.wsq.AsianGamesVolunteerApplication   : No active profile set, falling back to default profiles: default
-2021-07-03 10:26:37.519  INFO 5768 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-07-03 10:26:37.522  INFO 5768 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-07-03 10:26:37.559  INFO 5768 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
-2021-07-03 10:26:38.110  INFO 5768 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.wsq.code.config.RedisConfig$$EnhancerBySpringCGLIB$$285febc1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-07-03 10:26:38.544  INFO 5768 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2021-07-03 10:26:38.556  INFO 5768 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-03 10:26:38.557  INFO 5768 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
-2021-07-03 10:26:38.562  INFO 5768 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
-2021-07-03 10:26:38.564  INFO 5768 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-2021-07-03 10:26:38.564  INFO 5768 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2021-07-03 10:26:38.619  INFO 5768 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
-2021-07-03 10:26:38.821  INFO 5768 --- [main] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring embedded WebApplicationContext
-2021-07-03 10:26:38.821  INFO 5768 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2865 ms
-2021-07-03 10:26:43.468  INFO 5768 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-07-03 10:26:43.850  INFO 5768 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/volunteer'
-2021-07-03 10:26:44.264  INFO 5768 --- [main] com.wsq.AsianGamesVolunteerApplication   : Started AsianGamesVolunteerApplication in 9.111 seconds (JVM running for 11.645)
-2021-07-03 10:27:11.494  INFO 5768 --- [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-07-03 10:27:11.494  INFO 5768 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-07-03 10:27:11.500  INFO 5768 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
-2021-07-03 10:27:15.420 DEBUG 5768 --- [http-nio-8081-exec-1] c.wsq.code.mapper.UserMapper.selectById  : ==>  Preparing: SELECT id,student_id,password,name,sex,telephone,language,job,age,role FROM table_user WHERE id=?
-2021-07-03 10:27:15.458 DEBUG 5768 --- [http-nio-8081-exec-1] c.wsq.code.mapper.UserMapper.selectById  : ==> Parameters: 222(String)
-2021-07-03 10:27:15.493 DEBUG 5768 --- [http-nio-8081-exec-1] c.wsq.code.mapper.UserMapper.selectById  : <==      Total: 1
-2021-07-03 10:27:15.534 DEBUG 5768 --- [http-nio-8081-exec-1] c.wsq.code.mapper.UserMapper.deleteById  : ==>  Preparing: DELETE FROM table_user WHERE id=?
-2021-07-03 10:27:15.535 DEBUG 5768 --- [http-nio-8081-exec-1] c.wsq.code.mapper.UserMapper.deleteById  : ==> Parameters: 526159737fc28350e856a14473c324ba(String)
-2021-07-03 10:27:15.536 DEBUG 5768 --- [http-nio-8081-exec-1] c.wsq.code.mapper.UserMapper.deleteById  : <==    Updates: 0
-2021-07-03 10:27:25.701 ERROR 5768 --- [http-nio-8081-exec-3] com.wsq.code.config.GlobalException      : cn.dev33.satoken.exception.NotLoginException: token无效
-2021-07-03 11:21:14.501  INFO 23952 --- [main] com.wsq.AsianGamesVolunteerApplication   : Starting AsianGamesVolunteerApplication using Java 1.8.0_131 on DESKTOP-66NJ4C7 with PID 23952 (D:\INetItems\asian-games-volunteer\target\classes started by 晴 in D:\INetItems\asian-games-volunteer)
-2021-07-03 11:21:14.504 DEBUG 23952 --- [main] com.wsq.AsianGamesVolunteerApplication   : Running with Spring Boot v2.5.1, Spring v5.3.8
-2021-07-03 11:21:14.505  INFO 23952 --- [main] com.wsq.AsianGamesVolunteerApplication   : No active profile set, falling back to default profiles: default
-2021-07-03 11:21:15.733  INFO 23952 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-07-03 11:21:15.736  INFO 23952 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-07-03 11:21:15.769  INFO 23952 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
-2021-07-03 11:21:16.144  INFO 23952 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.wsq.code.config.RedisConfig$$EnhancerBySpringCGLIB$$86a344ea] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-07-03 11:21:16.569  INFO 23952 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2021-07-03 11:21:16.578  INFO 23952 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-03 11:21:16.579  INFO 23952 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
-2021-07-03 11:21:16.580  INFO 23952 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
-2021-07-03 11:21:16.581  INFO 23952 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-2021-07-03 11:21:16.581  INFO 23952 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2021-07-03 11:21:16.643  INFO 23952 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
-2021-07-03 11:21:16.845  INFO 23952 --- [main] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring embedded WebApplicationContext
-2021-07-03 11:21:16.846  INFO 23952 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2279 ms
-2021-07-03 11:21:20.594  INFO 23952 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-07-03 11:21:20.919  INFO 23952 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/volunteer'
-2021-07-03 11:21:21.267  INFO 23952 --- [main] com.wsq.AsianGamesVolunteerApplication   : Started AsianGamesVolunteerApplication in 7.273 seconds (JVM running for 9.291)
-2021-07-03 11:21:38.827  INFO 23952 --- [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/volunteer]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-07-03 11:21:38.828  INFO 23952 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-07-03 11:21:38.830  INFO 23952 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2021-07-03 11:23:14.942 DEBUG 23952 --- [http-nio-8081-exec-10] c.wsq.code.mapper.JobMapper.selectById   : ==>  Preparing: SELECT id,job_name FROM table_job WHERE id=?
-2021-07-03 11:23:14.985 DEBUG 23952 --- [http-nio-8081-exec-10] c.wsq.code.mapper.JobMapper.selectById   : ==> Parameters: string(String)
-2021-07-03 11:23:15.018 DEBUG 23952 --- [http-nio-8081-exec-10] c.wsq.code.mapper.JobMapper.selectById   : <==      Total: 0
-2021-07-03 11:23:25.286 DEBUG 23952 --- [http-nio-8081-exec-1] c.wsq.code.mapper.JobMapper.selectById   : ==>  Preparing: SELECT id,job_name FROM table_job WHERE id=?
-2021-07-03 11:23:25.287 DEBUG 23952 --- [http-nio-8081-exec-1] c.wsq.code.mapper.JobMapper.selectById   : ==> Parameters: 3(String)
-2021-07-03 11:23:25.346 DEBUG 23952 --- [http-nio-8081-exec-1] c.wsq.code.mapper.JobMapper.selectById   : <==      Total: 1
-2021-07-03 11:23:35.721 DEBUG 23952 --- [http-nio-8081-exec-3] c.wsq.code.mapper.JobMapper.selectById   : ==>  Preparing: SELECT id,job_name FROM table_job WHERE id=?
-2021-07-03 11:23:35.721 DEBUG 23952 --- [http-nio-8081-exec-3] c.wsq.code.mapper.JobMapper.selectById   : ==> Parameters: 3(String)
-2021-07-03 11:23:35.722 DEBUG 23952 --- [http-nio-8081-exec-3] c.wsq.code.mapper.JobMapper.selectById   : <==      Total: 1
-2021-07-03 11:23:35.803 DEBUG 23952 --- [http-nio-8081-exec-3] c.wsq.code.mapper.UserMapper.updateById  : ==>  Preparing: UPDATE table_user SET password=?, sex=?, telephone=?, language=?, job=?, age=? WHERE id=?
-2021-07-03 11:23:35.813 DEBUG 23952 --- [http-nio-8081-exec-3] c.wsq.code.mapper.UserMapper.updateById  : ==> Parameters: e10adc3949ba59abbe56e057f20f883e(String), 男(String), 13323452345(String), string(String), 3(String), 25(Integer), string(String)
-2021-07-03 11:23:35.865 DEBUG 23952 --- [http-nio-8081-exec-3] c.wsq.code.mapper.UserMapper.updateById  : <==    Updates: 0
+2021-07-04 08:28:58.223  INFO 16904 --- [lettuce-nioEventLoop-4-1] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_131]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[na:1.8.0_131]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_131]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_131]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380) ~[na:1.8.0_131]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253) ~[netty-buffer-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719) [netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655) [netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581) [netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493) [netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) [netty-common-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.65.Final.jar:4.1.65.Final]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_131]
+
+2021-07-04 08:28:59.456  INFO 16904 --- [lettuce-eventExecutorLoop-1-3] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /42.192.41.187:9736
+2021-07-04 08:28:59.600  WARN 16904 --- [lettuce-nioEventLoop-4-2] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [42.192.41.187:9736]: No route to host: no further information: /42.192.41.187:9736
+
+io.netty.channel.AbstractChannel$AnnotatedNoRouteToHostException: No route to host: no further information: /42.192.41.187:9736
+Caused by: java.net.NoRouteToHostException: No route to host: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.8.0_131]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717) ~[na:1.8.0_131]
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:707) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) ~[netty-common-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.65.Final.jar:4.1.65.Final]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_131]
+
+2021-07-04 08:29:05.835  INFO 16904 --- [lettuce-eventExecutorLoop-1-6] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 42.192.41.187:9736
+2021-07-04 08:29:05.840  WARN 16904 --- [lettuce-nioEventLoop-4-5] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [42.192.41.187:9736]: No route to host: no further information: /42.192.41.187:9736
+
+io.netty.channel.AbstractChannel$AnnotatedNoRouteToHostException: No route to host: no further information: /42.192.41.187:9736
+Caused by: java.net.NoRouteToHostException: No route to host: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.8.0_131]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717) ~[na:1.8.0_131]
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:707) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) ~[netty-common-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.65.Final.jar:4.1.65.Final]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_131]
+
+2021-07-04 08:29:28.323  INFO 16904 --- [lettuce-eventExecutorLoop-1-8] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 42.192.41.187:9736
+2021-07-04 08:29:28.363  INFO 16904 --- [lettuce-nioEventLoop-4-7] i.l.core.protocol.ReconnectionHandler    : Reconnected to 42.192.41.187:9736
+2021-07-04 08:36:18.994  INFO 16904 --- [lettuce-nioEventLoop-4-7] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_131]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[na:1.8.0_131]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_131]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_131]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380) ~[na:1.8.0_131]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253) ~[netty-buffer-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719) [netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655) [netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581) [netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493) [netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) [netty-common-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.65.Final.jar:4.1.65.Final]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_131]
+
+2021-07-04 08:36:19.029  INFO 16904 --- [lettuce-eventExecutorLoop-1-6] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /42.192.41.187:9736
+2021-07-04 08:36:19.035  WARN 16904 --- [lettuce-nioEventLoop-4-8] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [42.192.41.187:9736]: No route to host: no further information: /42.192.41.187:9736
+
+io.netty.channel.AbstractChannel$AnnotatedNoRouteToHostException: No route to host: no further information: /42.192.41.187:9736
+Caused by: java.net.NoRouteToHostException: No route to host: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.8.0_131]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717) ~[na:1.8.0_131]
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:707) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) ~[netty-common-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.65.Final.jar:4.1.65.Final]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_131]
+
+2021-07-04 08:36:19.920  INFO 16904 --- [lettuce-nioEventLoop-4-7] i.l.core.protocol.ReconnectionHandler    : Reconnected to 42.192.41.187:9736
