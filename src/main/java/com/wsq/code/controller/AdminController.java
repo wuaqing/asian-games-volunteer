@@ -4,6 +4,7 @@ package com.wsq.code.controller;
 import cn.dev33.satoken.annotation.SaCheckRole;
 import cn.dev33.satoken.stp.StpUtil;
 import com.wsq.code.entity.User;
+import com.wsq.code.entity.user.AdminReleaseExam;
 import com.wsq.code.entity.user.AdminUserUpdate;
 import com.wsq.code.entity.user.UserLogin;
 import com.wsq.code.service.UserService;
@@ -37,6 +38,20 @@ public class AdminController {
 
     @Resource
     private RedisTemplate<String,Object> redisTemplate;
+
+    /**
+     *
+     * @description: 管理员发布考试
+     * @author wsq
+     * @since 2021/7/5 9:24
+     * @param token:
+     * @param releaseExam: 管理员发布考试内容实体类
+     * @return com.xiaoTools.core.result.Result
+    */
+    @PostMapping("releaseExam")
+    public Result releaseExam(@RequestHeader(value = "satoken")String token, @RequestBody AdminReleaseExam releaseExam){
+        return userService.adminReleaseExam(releaseExam,"/admin/releaseExam");
+    }
 
     /**
      *

@@ -153,4 +153,15 @@ public interface UserService extends IService<User> {
      * @return com.xiaoTools.core.result.Result
     */
     Result adminSelectUserByJob(Integer current, Integer size, String jobId, String path);
+
+    /**
+     *
+     * @description: 管理员发布考试
+     * @author wsq
+     * @since 2021/7/5 9:28
+     * @param releaseExam: 管理员发布考试内容实体类
+     * @param path:
+     * @return com.xiaoTools.core.result.Result
+    */
+    Result adminReleaseExam(AdminReleaseExam releaseExam, String path);
 }

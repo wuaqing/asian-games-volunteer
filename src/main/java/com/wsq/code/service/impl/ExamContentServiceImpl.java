@@ -17,4 +17,16 @@ import org.springframework.stereotype.Service;
 @Service
 public class ExamContentServiceImpl extends ServiceImpl<ExamContentMapper, ExamContent> implements ExamContentService {
 
+    /**
+     *
+     * @description: 管理员发布考试,保存考试内容
+     * @author wsq
+     * @since 2021/7/5 9:38
+     * @param examContent: 考试内容
+     * @return java.lang.Boolean
+    */
+    @Override
+    public Boolean saveExam(ExamContent examContent) {
+        return this.save(examContent);
+    }
 }

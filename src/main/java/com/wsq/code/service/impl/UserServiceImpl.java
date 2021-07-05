@@ -4,11 +4,13 @@ import cn.afterturn.easypoi.excel.ExcelImportUtil;
 import cn.afterturn.easypoi.excel.entity.ImportParams;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.wsq.code.entity.ExamContent;
 import com.wsq.code.entity.Job;
 import com.wsq.code.entity.User;
 import com.wsq.code.entity.user.*;
 import com.wsq.code.mapper.JobMapper;
 import com.wsq.code.mapper.UserMapper;
+import com.wsq.code.service.ExamContentService;
 import com.wsq.code.service.JobService;
 import com.wsq.code.service.UserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -52,6 +54,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
 
     @Resource
     private JobService jobService;
+
+    @Resource
+    private ExamContentService examContentService;
 
     @Resource
     private RedisTemplate<String,Object> redisTemplate;
@@ -463,6 +468,28 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     public Result adminSelectUserByJob(Integer current, Integer size, String jobId, String path) {
         IPage<User> userIPage = userMapper.selectUserByJob(new Page<>(current, size), jobId);
         return new Result().result200(userIPage,path);
+    }
+
+    /**
+     *
+     * @description: 管理员发布考试
+     * @author wsq
+     * @since 2021/7/5 9:29
+     * @param releaseExam: 管理员发布考试内容实体类
+     * @param path:
+     * @return com.xiaoTools.core.result.Result
+    */
+    @Override
+    public Result adminReleaseExam(AdminReleaseExam releaseExam, String path) {
+        //实体类拷贝
+        ExamContent examContent = BeanUtil.copy(releaseExam, ExamContent.class);
+        //在数据库中添加考试内容
+        Boolean saveExam = examContentService.saveExam(examContent);
+        //判断是否添加成功
+        if (saveExam) {
+            return new Result().result200("添加成功",path);
+        }
+        return new Result().result403("添加失败",path);
     }
 
 }

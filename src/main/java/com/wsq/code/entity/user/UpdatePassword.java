@@ -6,6 +6,8 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
+import java.io.Serializable;
+
 /**
  * <p>
  * 用户修改密码实体类
@@ -19,7 +21,7 @@ import lombok.experimental.Accessors;
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-public class UpdatePassword {
+public class UpdatePassword implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
